@@ -1,0 +1,63 @@
+<nav class="navbar" id="home_navbar">
+  <div class="navbar__inner">
+    <div class="navbar__logo">
+      <a href="/" >
+        <img src="/assets/images/logo.svg" alt="RubyConf Austria" />
+      </a>
+    </div>
+
+    <ul class="navbar__list">
+      <li class="navbar__list__item">
+        <a href="/coc" class="navbar__list__link">Code of Conduct</a>
+      </li>
+      <li class="navbar__list__item">
+        <a href="/#location" class="navbar__list__link">Location</a>
+      </li>
+      <li class="navbar__list__item">
+        <a href="/#speakers" class="navbar__list__link">Speakers</a>
+      </li>
+      <li class="navbar__list__item has-note">
+        <a href="https://www.papercall.io/rubyconfaustria2026" target="_blank" class="button button--secondary">Submit a talk</a>
+      </li>
+    </ul>
+  </div>
+  <div class="navbar__mobile">
+    <div class="navbar__mobile__inner">
+      <div class="navbar__logo">
+        <a href="/" >
+          <img src="/assets/images/logo.svg" alt="RubyConf Austria" />
+        </a>
+      </div>
+      <div onClick="toggleMenu()" class="navbar_mobile__menu">
+        <img src="/assets/images/menu.svg"/>
+      </div>
+    </div>
+    <div class="navbar__mobile__content">
+      <div class="navbar__mobile__content__inner">
+        <div onClick="toggleMenu()" class="navbar_mobile__close">
+          <img src="/assets/images/close.svg"/>
+        </div>
+        <ul class="navbar__list">
+          <li class="navbar__list__item">
+            <a href="/coc" class="navbar__list__link">Code of Conduct</a>
+          </li>
+          <li class="navbar__list__item">
+            <a href="/#location" class="navbar__list__link">Location</a>
+          </li>
+          <li class="navbar__list__item">
+            <a href="/#speakers" class="navbar__list__link">Speakers</a>
+          </li>
+          <li class="navbar__list__item">
+            <a href="https://www.papercall.io/rubyconfaustria2026" target="_blank" class="button button--secondary">Submit a talk</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<script type="text/javascript">
+  function toggleMenu() {
+    document.getElementsByClassName('navbar__mobile__content')[0].classList.toggle('is-visible');
+  }
+</script>
