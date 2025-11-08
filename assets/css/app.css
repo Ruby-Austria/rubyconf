@@ -558,7 +558,6 @@ body {
   transform: translateY(-50%);
   width: 24px;
   height: 24px;
-  background: url('../images/title_dot.svg') center center / contain no-repeat scroll;
 }
 
 .hero__speakers__list {
@@ -871,7 +870,6 @@ body {
   height: 40px;
   width: 40px;
   flex-shrink: 0;
-  background: url('../images/title_dot.svg') center center / contain no-repeat scroll;
 }
 
 .section__article__title.two-rows {
@@ -1315,7 +1313,6 @@ body {
   transform: translateY(-50%);
   width: 24px;
   height: 24px;
-  background: url('../images/title_dot.svg') center center / contain no-repeat scroll;
 }
 
 .card.card--presenter .card__name {
@@ -1434,10 +1431,6 @@ body {
 
 .benefits .benefits__item:nth-child(2n + 1)::before {
   background-image: url('../images/dot_bullet.png');
-}
-
-.benefits .benefits__item:nth-child(2n)::before {
-  background-image: url('../images/title_dot.svg');
 }
 
 .benefit .benefit__title {
