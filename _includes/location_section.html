@@ -41,8 +41,12 @@
   </div>
 </section>
 <script type="text/javascript">
+  var currentSlide = 1;
+  var totalSlides = 3;
+  var isScrolling = false;
+
   function updateSliderAriaStates(activeIndex) {
-    for (var i = 1; i <= 3; i++) {
+    for (var i = 1; i <= totalSlides; i++) {
       var button = document.getElementById('slider_button_' + i);
       if (button) {
         button.setAttribute('aria-selected', i === activeIndex ? 'true' : 'false');
@@ -50,48 +54,106 @@
     }
   }
 
-  function showSlideOne() {
-    setElementClass("slide_3", "is-hidden");
-    setElementClass("slide_2", "is-hidden");
-    removeElementClass("slide_1", "is-hidden");
-
-    removeElementClass("slide_3", "is-showing");
-    removeElementClass("slide_2", "is-showing");
-    setElementClass("slide_1", "is-showing");
-
-    removeElementClass("slider_button_3", "is-active");
-    removeElementClass("slider_button_2", "is-active");
-    setElementClass("slider_button_1", "is-active");
-    updateSliderAriaStates(1);
+  function showSlide(index) {
+    if (index < 1) index = totalSlides;
+    if (index > totalSlides) index = 1;
+    
+    currentSlide = index;
+    
+    for (var i = 1; i <= totalSlides; i++) {
+      var slide = document.getElementById('slide_' + i);
+      var button = document.getElementById('slider_button_' + i);
+      
+      if (i === index) {
+        removeElementClass('slide_' + i, 'is-hidden');
+        setElementClass('slide_' + i, 'is-showing');
+        setElementClass('slider_button_' + i, 'is-active');
+      } else {
+        setElementClass('slide_' + i, 'is-hidden');
+        removeElementClass('slide_' + i, 'is-showing');
+        removeElementClass('slider_button_' + i, 'is-active');
+      }
+    }
+    updateSliderAriaStates(index);
   }
 
-  function showSlideTwo() {
-    setElementClass("slide_1", "is-hidden");
-    setElementClass("slide_3", "is-hidden");
-    removeElementClass("slide_2", "is-hidden");
-
-    removeElementClass("slide_1", "is-showing");
-    removeElementClass("slide_3", "is-showing");
-    setElementClass("slide_2", "is-showing");
-
-    removeElementClass("slider_button_3", "is-active");
-    removeElementClass("slider_button_1", "is-active");
-    setElementClass("slider_button_2", "is-active");
-    updateSliderAriaStates(2);
+  function nextSlide() {
+    showSlide(currentSlide + 1);
   }
 
-  function showSlideThree() {
-    setElementClass("slide_1", "is-hidden");
-    setElementClass("slide_2", "is-hidden");
-    removeElementClass("slide_3", "is-hidden");
-
-    removeElementClass("slide_1", "is-showing");
-    removeElementClass("slide_2", "is-showing");
-    setElementClass("slide_3", "is-showing");
-
-    removeElementClass("slider_button_1", "is-active");
-    removeElementClass("slider_button_2", "is-active");
-    setElementClass("slider_button_3", "is-active");
-    updateSliderAriaStates(3);
+  function prevSlide() {
+    showSlide(currentSlide - 1);
   }
+
+  function showSlideOne() { showSlide(1); }
+  function showSlideTwo() { showSlide(2); }
+  function showSlideThree() { showSlide(3); }
+
+  // Mouse wheel scrolling
+  document.addEventListener('DOMContentLoaded', function() {
+    var sliderElement = document.querySelector('.slider');
+    
+    if (sliderElement) {
+      // Mouse wheel support
+      sliderElement.addEventListener('wheel', function(e) {
+        if (isScrolling) return;
+        
+        e.preventDefault();
+        isScrolling = true;
+        
+        if (e.deltaY > 0 || e.deltaX > 0) {
+          nextSlide();
+        } else {
+          prevSlide();
+        }
+        
+        setTimeout(function() {
+          isScrolling = false;
+        }, 300);
+      }, { passive: false });
+
+      // Touch swipe support
+      var touchStartX = 0;
+      var touchStartY = 0;
+      var touchEndX = 0;
+      var touchEndY = 0;
+
+      sliderElement.addEventListener('touchstart', function(e) {
+        touchStartX = e.changedTouches[0].screenX;
+        touchStartY = e.changedTouches[0].screenY;
+      }, { passive: true });
+
+      sliderElement.addEventListener('touchend', function(e) {
+        touchEndX = e.changedTouches[0].screenX;
+        touchEndY = e.changedTouches[0].screenY;
+        handleSwipe();
+      }, { passive: true });
+
+      function handleSwipe() {
+        var diffX = touchStartX - touchEndX;
+        var diffY = touchStartY - touchEndY;
+        
+        // Only trigger if horizontal swipe is greater than vertical
+        if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 50) {
+          if (diffX > 0) {
+            nextSlide(); // Swipe left = next
+          } else {
+            prevSlide(); // Swipe right = prev
+          }
+        }
+      }
+
+      // Keyboard navigation when slider is focused
+      sliderElement.setAttribute('tabindex', '0');
+      sliderElement.addEventListener('keydown', function(e) {
+        if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+          e.preventDefault();
+          nextSlide();
+        } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+          e.preventDefault();
+          prevSlide();
+        }
+      });
+    }
+  });
 </script>
