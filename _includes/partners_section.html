@@ -1,16 +1,11 @@
 <section class="section section--partners" id="partners" aria-label="Community Partners">
   <div class="section__content">
-    <h2 class="section__title is-centered">Community Partners</h2>
-    <div class="cards">
+    <div class="partners-stickers">
       {% for partner in site.data.partners %}
-      <div class="cards__item col--1-4 col--md-1-2 col--sm-100 cards__item--spread">
-        <div class="card card--partner">
-          <div class="card__body">
-            <a href="{{ partner.link }}" target="_blank" class="card__body__link" aria-label="Visit {{ partner.name }}">
-              <img src="{{ partner.image }}" alt="{{ partner.name }}" loading="lazy" />
-            </a>
-          </div>
-        </div>
+      <div class="partner-sticker partner-sticker--{{ forloop.index }}">
+        <a href="{{ partner.link }}" target="_blank" class="partner-sticker__link" aria-label="Visit {{ partner.name }}">
+          <img src="{{ partner.image }}" alt="{{ partner.name }}" class="partner-sticker__image" loading="lazy" />
+        </a>
       </div>
       {% endfor %}
     </div>

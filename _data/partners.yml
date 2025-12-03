@@ -3,15 +3,15 @@
   link: https://ruby.wien/
 
 - name: Wroclove
-  image: /assets/images/partners/wroc_logo.svg
+  image: /assets/images/partners/wroclove.png
   link: https://wrocloverb.com/
 
 - name: Rubycon.it
-  image: /assets/images/partners/rubyconit.jpg
+  image: /assets/images/partners/rubyconit.png
   link: https://rubycon.it/
 
 - name: RubyEurope
-  image: /assets/images/partners/ruby-europe.svg
+  image: /assets/images/partners/rubyeurope.png
   link: https://rubyeurope.com/
 
 - name: SFRubyConf
@@ -19,13 +19,13 @@
   link: https://sfruby.com/
 
 - name: RubyTurkiye
-  image: /assets/images/partners/rubytrlogo.svg
+  image: /assets/images/partners/rubyturkiye.png
   link: https://rubyturkiye.org/
 
 - name: BalticRuby
-  image: /assets/images/partners/balticruby.webp
+  image: /assets/images/partners/balticruby.png
   link: https://balticruby.org/
 
 - name: EuRuKo2025
-  image: /assets/images/partners/euruko2025.webp
+  image: /assets/images/partners/euruko.png
   link: https://2025.euruko.org/
