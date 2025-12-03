@@ -569,17 +569,6 @@
   background-color: var(--secondary-color);
 }
 
-.header::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1;
-  background: url('../images/bg_overlay.png') center center / cover repeat-y scroll;
-}
-
 .header__content {
   display: flex;
   flex-direction: column;
@@ -1012,6 +1001,13 @@
 
 .card .card__logo__link {
   display: inline-block;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.card .card__logo__link:hover,
+.card .card__logo__link:focus {
+  transform: scale(1.05);
+  opacity: 0.9;
 }
 
 .card .card__logo__link img {
@@ -1134,6 +1130,13 @@
 .card.card--partner .card__body .card__body__link {
   display: inline-flex;
   margin: 10px 0;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.card.card--partner .card__body .card__body__link:hover,
+.card.card--partner .card__body .card__body__link:focus {
+  transform: scale(1.05);
+  opacity: 0.9;
 }
 
 .card.card--partner .card__body .card__body__link img {
@@ -1771,6 +1774,13 @@
   font-weight: 300;
   color: var(--text-color-default);
   text-decoration: none;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.footer__nav .footer__nav__item:hover,
+.footer__nav .footer__nav__item:focus {
+  color: var(--primary-color);
+  opacity: 0.9;
 }
 
 .footer__nav .footer__nav__item + .footer__nav__item {
@@ -1862,6 +1872,13 @@
   font-weight: 300;
   font-family: "Poppins", sans-serif;
   color: var(--text-color-default);
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.footer__contacts .footer__contacts__list .footer__contacts__link:hover,
+.footer__contacts .footer__contacts__list .footer__contacts__link:focus {
+  color: var(--primary-color);
+  opacity: 0.9;
 }
 
 .footer__contacts .footer__contacts__list .footer__contacts__item + .footer__contacts__item {
@@ -2001,6 +2018,20 @@
   margin-right: 10px;
 }
 
+.mt--2 {
+  margin-top: 20px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.container--narrow {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .table {
   width: 100%;
   border-collapse: collapse;
@@ -2019,6 +2050,14 @@
 .table.table--packages thead tr th:nth-child(4),
 .table.table--packages thead tr th:nth-child(5) {
   width: 15%;
+}
+
+.table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.table tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 .table tbody tr td {
@@ -2157,10 +2196,6 @@
 
   .navbar__list__item.has-note {
     position: relative;
-  }
-
-  .navbar__list__link {
-
   }
 
   .hero {

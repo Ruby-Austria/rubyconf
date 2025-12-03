@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="en-US">
+
+<!-- remove no-js after custom page in place -->
+<html class="no-js" lang="en-US">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -30,10 +32,13 @@
 
 <body>
   <div class="page">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
     {% include navigation.html %}
 
-    {{ content }}
+    <div id="main-content">
+      {{ content }}
+    </div>
 
     {% include footer.html %}
   </div>
@@ -41,3 +46,17 @@
   {% include cookie_consent.html %}
 </body>
 </html>
+<script type="text/javascript">
+  function removeElementClass(id, style_class) {
+    var element = document.getElementById(id);
+    if (element.classList.contains(style_class)) {
+      element.classList.remove(style_class);
+    }
+  }
+  function setElementClass(id, style_class) {
+    var element = document.getElementById(id);
+    if (!element.classList.contains(style_class)) {
+      element.classList.add(style_class);
+    }
+  }
+</script>
