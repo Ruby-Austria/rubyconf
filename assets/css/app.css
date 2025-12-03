@@ -552,7 +552,7 @@
   background-color: var(--primary-color);
 }
 .header.header-speakers {
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
 }
 
 .header__content {
