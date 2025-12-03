@@ -1,79 +1,18 @@
-<section class="section section--partners" id="partners">
+<section class="section section--partners" id="partners" aria-label="Community Partners">
   <div class="section__content">
     <h2 class="section__title is-centered">Community Partners</h2>
     <div class="cards">
+      {% for partner in site.data.partners %}
       <div class="cards__item col--1-4 col--md-1-2 col--sm-100 cards__item--spread">
         <div class="card card--partner">
           <div class="card__body">
-            <a href="https://ruby.wien/" target="_blank" class="card__body__link">
-              <img src="/assets/images/partners/viennarb.png" alt="Vienna.rb" />
+            <a href="{{ partner.link }}" target="_blank" class="card__body__link" aria-label="Visit {{ partner.name }}">
+              <img src="{{ partner.image }}" alt="{{ partner.name }}" loading="lazy" />
             </a>
           </div>
         </div>
       </div>
-      <div class="cards__item col--1-4 col--md-1-2 col--sm-100 cards__item--spread">
-        <div class="card card--partner">
-          <div class="card__body">
-            <a href="https://wrocloverb.com/" target="_blank" class="card__body__link">
-              <img src="/assets/images/partners/wroc_logo.svg" alt="Wroclove" />
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="cards__item col--1-4 col--md-1-2 col--sm-100 cards__item--spread">
-        <div class="card card--partner">
-          <div class="card__body">
-            <a href="https://rubycon.it/" target="_blank" class="card__body__link">
-              <img src="/assets/images/partners/rubyconit.jpg" alt="Rubycon.it" />
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="cards__item col--1-4 col--md-1-2 col--sm-100 cards__item--spread">
-        <div class="card card--partner">
-          <div class="card__body">
-            <a href="https://rubyeurope.com/" target="_blank" class="card__body__link">
-              <img src="/assets/images/partners/ruby-europe.svg" alt="RubyEurope" />
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="cards__item col--1-4 col--md-1-2 col--sm-100 cards__item--spread">
-        <div class="card card--partner">
-          <div class="card__body">
-            <a href="https://sfruby.com/" target="_blank" class="card__body__link">
-              <img src="/assets/images/partners/sfrubyconf.png" alt="SFRubyConf" />
-            </a>
-          </div>
-        </div>
-      </div>      
-      <div class="cards__item col--1-4 col--md-1-2 col--sm-100 cards__item--spread">
-        <div class="card card--partner">
-          <div class="card__body">
-            <a href="https://rubyturkiye.org/" target="_blank" class="card__body__link">
-              <img src="/assets/images/partners/rubytrlogo.svg" alt="RubyTurkiye" />
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="cards__item col--1-4 col--md-1-2 col--sm-100 cards__item--spread">
-        <div class="card card--partner">
-          <div class="card__body">
-            <a href="https://balticruby.org/" target="_blank" class="card__body__link">
-              <img src="/assets/images/partners/balticruby.webp" alt="BalticRuby" />
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="cards__item col--1-4 col--md-1-2 col--sm-100 cards__item--spread">
-        <div class="card card--partner">
-          <div class="card__body">
-            <a href="https://2025.euruko.org/" target="_blank" class="card__body__link">
-              <img src="/assets/images/partners/euruko2025.webp" alt="EuRuKo2025" />
-            </a>
-          </div>
-        </div>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </section>

@@ -1,22 +1,22 @@
-<footer class="footer">
+<footer class="footer" role="contentinfo">
   <div class="footer__header">
-    <img src="/assets/images/logo.png" alt="Logo Footer" />
+    <img src="/assets/images/logo.png" alt="RubyConf Austria Logo" loading="lazy" />
   </div>
   <div class="footer__body">
     <div class="footer__content">
-      <nav class="footer__nav">
+      <nav class="footer__nav" aria-label="Footer navigation">
         <a href="/#home_navbar" class="footer__nav__item">Home</a>
         <a href="/coc" class="footer__nav__item">Code of Conduct</a>
         <a href="/#location" class="footer__nav__item">Location</a>
         <a href="/#speakers" class="footer__nav__item">Speakers</a>
         <a href="/#sponsors" class="footer__nav__item">Sponsors</a>
       </nav>
-      <ul class="footer__socials">
+      <ul class="footer__socials" aria-label="Social media links">
         <li class="footer__socials__item">
-          <a href="https://www.linkedin.com/company/rubyconfat" target="_blank" class="footer__socials__link for-linkedin"></a>
+          <a href="https://www.linkedin.com/company/rubyconfat" target="_blank" class="footer__socials__link for-linkedin" aria-label="RubyConf Austria on LinkedIn"></a>
         </li>
         <li class="footer__socials__item">
-          <a href="https://twitter.com/RubyConfAT" target="_blank" class="footer__socials__link for-twitter"></a>
+          <a href="https://twitter.com/RubyConfAT" target="_blank" class="footer__socials__link for-twitter" aria-label="RubyConf Austria on Twitter"></a>
         </li>
       </ul>
       <div class="footer__blocks">
@@ -46,9 +46,11 @@
             class="footer__form"
             target="_blank"
             novalidate
+            aria-label="Newsletter subscription form"
         >
             <div class="footer__input">
-                <input type="email" name="EMAIL" id="mce-EMAIL" class="footer__input__field" placeholder="example@gmail.com" />
+                <label for="mce-EMAIL" class="sr-only">Email address</label>
+                <input type="email" name="EMAIL" id="mce-EMAIL" class="footer__input__field" placeholder="example@gmail.com" required aria-required="true" />
             </div>
             <button type="submit" name="subscribe" class="button button--primary">Subscribe</button>
             <div aria-hidden="true" style="position: absolute; left: -5000px">

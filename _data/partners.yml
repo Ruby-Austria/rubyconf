@@ -1,0 +1,31 @@
+- name: Vienna.rb
+  image: /assets/images/partners/viennarb.png
+  link: https://ruby.wien/
+
+- name: Wroclove
+  image: /assets/images/partners/wroc_logo.svg
+  link: https://wrocloverb.com/
+
+- name: Rubycon.it
+  image: /assets/images/partners/rubyconit.jpg
+  link: https://rubycon.it/
+
+- name: RubyEurope
+  image: /assets/images/partners/ruby-europe.svg
+  link: https://rubyeurope.com/
+
+- name: SFRubyConf
+  image: /assets/images/partners/sfrubyconf.png
+  link: https://sfruby.com/
+
+- name: RubyTurkiye
+  image: /assets/images/partners/rubytrlogo.svg
+  link: https://rubyturkiye.org/
+
+- name: BalticRuby
+  image: /assets/images/partners/balticruby.webp
+  link: https://balticruby.org/
+
+- name: EuRuKo2025
+  image: /assets/images/partners/euruko2025.webp
+  link: https://2025.euruko.org/

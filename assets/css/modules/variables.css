@@ -1,0 +1,17 @@
+/* Colors and variables */
+:root {
+  --text-color-default: #FFFFFF;
+  --text-color-dark: #111111;
+  --primary-color: #E30818;
+  --secondary-color: #111111;
+  --card-label-ruby: #DB2026;
+  --card-label-default: #545454;
+  --card-label-gold: #C3C706;
+  --card-label-silver: #7A7676;
+  --card-label-bronze: #925904;
+  --card-label-online: #0A95C1;
+  --card-label-travel: #55B509;
+  --card-label-helper: #0C5A10;
+  --line-color: #F1E8E9;
+  --image-placeholder: #D9D9D9;
+}

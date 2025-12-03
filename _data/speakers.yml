@@ -1,0 +1,43 @@
+- name: Dave Thomas
+  image: /assets/images/speakers/dave_thomas.png
+  link: https://pragdave.me/
+  note: Author of The Pragmatic Programmer, Programming Ruby, Agile Web Development With Rails, Programming Elixir...
+  socials:
+    - type: twitter
+      url: https://x.com/pragdave
+- name: Chad Fowler
+  image: /assets/images/speakers/chad_fowler.png
+  link: https://chadfowler.com/
+  note: CTO & General Partner, BlueYard
+  socials:
+    - type: twitter
+      url: https://x.com/chadfowler
+- name: José Valim
+  image: /assets/images/speakers/Jose - web.png
+  link: https://x.com/josevalim?lang=en
+  note: Creator of the Elixir programming language and Chief Adoption Officer at Dashbit, the company behind Tidewave and Livebook.
+  socials:
+    - type: twitter
+      url: https://x.com/josevalim?lang=en
+- name: Zuzanna Kusznir (MC)
+  image: /assets/images/speakers/Zuzzana - web.png
+  link: https://x.com/zuzanna_kusznir
+  note: Software engineer at Momentum | wroclove.rb host
+  socials:
+    - type: twitter
+      url: https://x.com/zuzanna_kusznir
+- name: Iman Jahić Hošić
+  image: /assets/images/speakers/Iman - web.png
+  link: /#speakers
+  note: Piano/Klavier
+  socials: []
+- name: Nadir Hošić
+  image: /assets/images/speakers/Nadir - web.png
+  link: /#speakers
+  note: Piano/Klavier
+  socials: []
+- name: Julia Siedl
+  image: /assets/images/speakers/Julia - web.png
+  link: https://juliasiedl.com
+  note: Piano/Klavier
+  socials: []

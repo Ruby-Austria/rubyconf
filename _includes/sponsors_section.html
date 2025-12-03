@@ -1,4 +1,4 @@
-<section class="section section--sponsors" id="sponsors">
+<section class="section section--sponsors" id="sponsors" aria-label="Conference Sponsors">
   <div class="section__content">
     <h2 class="section__title is-centered mb--1">Sponsors</h2>
     <p class="section__text text--align-center mb--2">The essential reason of why RubyConf Austria is more affordable for our community.</p>
@@ -7,24 +7,21 @@
         Become a Sponsor
       </a>
     </div>
-    <div class="cards">
-      <div class="cards__item col--1-4 col--md-1-2 col--sm-100">
-        <div class="card is-dark">
-          <div class="card__label card-label--online">Online</div>
-          <div class="card__body">
-            <div class="card__logo mb--2">
-              <a href="https://typesense.org/" target="_blank" class="card__logo__link">
-                <img src="/assets/images/sponsors/typesense.png" alt="Typesense" />
-              </a>
+      <div class="cards">
+        {% for sponsor in site.data.sponsors %}
+        <div class="cards__item col--1-4 col--md-1-2 col--sm-100">
+          <div class="card is-dark">
+            <div class="card__label card-label--online">{{ sponsor.label }}</div>
+            <div class="card__body">
+              <div class="card__logo mb--2">
+                <a href="{{ sponsor.link }}" target="_blank" class="card__logo__link" aria-label="Visit {{ sponsor.name }}">
+                  <img src="{{ sponsor.image }}" alt="{{ sponsor.name }}" loading="lazy" />
+                </a>
+              </div>
             </div>
           </div>
         </div>
+        {% endfor %}
       </div>
-    </div>
-    <!-- <div class="text--align-center">
-      <a href="/sponsoring" class="button button--secondary">
-        Become a Sponsor
-      </a>
-    </div> -->
   </div>
 </section>

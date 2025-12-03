@@ -1,111 +1,9 @@
 /* --------------------------------------- */
-/* Reset */
-/* --------------------------------------- */
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-* {
-  margin: 0;
-}
-
-body {
-  line-height: 1.375;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility
-}
-
-img,
-picture,
-video,
-canvas,
-svg {
-  display: block;
-  max-width: 100%;
-}
-
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  overflow-wrap: break-word;
-}
-
-/* --------------------------------------- */
-/* Colors */
-/* --------------------------------------- */
-
-:root {
-  --text-color-default: #FFFFFF;
-  --text-color-dark: #111111;
-  --primary-color: #E30818;
-  --secondary-color: #111111;
-  --card-label-ruby: #DB2026;
-  --card-label-default: #545454;
-  --card-label-gold: #C3C706;
-  --card-label-silver: #7A7676;
-  --card-label-bronze: #925904;
-  --card-label-online: #0A95C1;
-  --card-label-travel: #55B509;
-  --card-label-helper: #0C5A10;
-  --line-color: #F1E8E9;
-  --image-placeholder: #D9D9D9;
-}
-
-/* --------------------------------------- */
-/* Styles */
-/* --------------------------------------- */
-
-html,
-body {
-  height: 100%;
-}
-
-body {
-  font-size: 16px;
-  font-family: 'Kanit', sans-serif;
-}
-
-.page {
-  position: relative;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-  user-select: none;
-  outline: 0;
-  font-family: 'Kanit', sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  letter-spacing: .5px;
-  border-width: 1px;
-  border-style: solid;
-  border-radius: 15px 15px 0 0;
-  padding: 16px 16px;
-  transition: all .25s;
-}
+@import url('./modules/reset.css');
+@import url('./modules/variables.css');
+@import url('./modules/layout.css');
+@import url('./modules/button.css');
+@import url('./modules/accessibility.css');
 
 .location-super-text {
   font-size: clamp(2rem, 10vw, 150px);
@@ -1795,6 +1693,8 @@ body {
   background-color: var(--text-color-dark);
   opacity: 0.5;
   cursor: pointer;
+  border: none;
+  padding: 0;
 }
 
 .slider .slider__control:hover {
@@ -1803,6 +1703,7 @@ body {
 
 .slider .slider__control.is-active {
   background-color: var(--primary-color);
+  opacity: 1;
 }
 
 .slider .slider__control + .slider__control {
@@ -2188,6 +2089,13 @@ body {
     height: 36px;
     background: url('../images/menu.svg') center center no-repeat scroll;
     cursor: pointer;
+    border: none;
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .navbar .navbar__mobile .navbar_mobile__menu img {
+    display: none;
   }
 
   .navbar .navbar__mobile .navbar_mobile__close {
@@ -2199,6 +2107,13 @@ body {
     height: 36px;
     background: url('../images/close.svg') center center no-repeat scroll;
     cursor: pointer;
+    border: none;
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .navbar .navbar__mobile .navbar_mobile__close img {
+    display: none;
   }
 
   .navbar .navbar__mobile .navbar__mobile__content {
@@ -2782,6 +2697,13 @@ body {
     height: 36px;
     background: url('../images/menu.svg') center center no-repeat scroll;
     cursor: pointer;
+    border: none;
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .navbar .navbar__mobile .navbar_mobile__menu img {
+    display: none;
   }
 
   .navbar .navbar__mobile .navbar_mobile__close {
@@ -2793,6 +2715,13 @@ body {
     height: 36px;
     background: url('../images/close.svg') center center no-repeat scroll;
     cursor: pointer;
+    border: none;
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .navbar .navbar__mobile .navbar_mobile__close img {
+    display: none;
   }
 
   .navbar .navbar__mobile .navbar__mobile__content {

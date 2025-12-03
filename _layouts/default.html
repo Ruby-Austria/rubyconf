@@ -32,10 +32,13 @@
 
 <body>
   <div class="page">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
     {% include navigation.html %}
 
-    {{ content }}
+    <div id="main-content">
+      {{ content }}
+    </div>
 
     {% include footer.html %}
 

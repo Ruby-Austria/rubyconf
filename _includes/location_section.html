@@ -1,9 +1,9 @@
-<section class="section section--location" id="location">
+<section class="section section--location" id="location" aria-label="Venue and Location">
   <div class="section__content">
     <article class="section__article">
       <div class="col--1-2 col--sm-100">
         <h3>The Venue</h3>
-        <div class="location-super-text">DAS MUTH</div>
+        <div class="location-super-text" aria-label="Das MuTh Theatre">DAS MUTH</div>
         <div class="location-super-text">THEATRE</div>
 
         <p class="section__article__text mb--2">
@@ -17,22 +17,22 @@
       </div>
       <div class="col--1-2 col--sm-100">
         <div class="section__article__slider">
-          <div class="slider">
+          <div class="slider" role="region" aria-label="Venue image gallery">
             <div class="slider__inner">
-              <div class="slider__item is-showing" id="slide_1">
-                <img src="/assets/images/slides/slide_1.jpg" alt="Das MuTh 1" />
+              <div class="slider__item is-showing" id="slide_1" role="group" aria-roledescription="slide" aria-label="Slide 1 of 3">
+                <img src="/assets/images/slides/slide_1.jpg" alt="Das MuTh concert hall interior view 1" loading="lazy" />
               </div>
-              <div class="slider__item is-hidden" id="slide_2">
-                <img src="/assets/images/slides/slide_2.jpg" alt="Das MuTh 2" />
+              <div class="slider__item is-hidden" id="slide_2" role="group" aria-roledescription="slide" aria-label="Slide 2 of 3">
+                <img src="/assets/images/slides/slide_2.jpg" alt="Das MuTh concert hall interior view 2" loading="lazy" />
               </div>
-              <div class="slider__item is-hidden" id="slide_3">
-                <img src="/assets/images/slides/slide_3.jpg" alt="Das MuTh 3" />
+              <div class="slider__item is-hidden" id="slide_3" role="group" aria-roledescription="slide" aria-label="Slide 3 of 3">
+                <img src="/assets/images/slides/slide_3.jpg" alt="Das MuTh concert hall interior view 3" loading="lazy" />
               </div>
             </div>
-            <div class="slider__controls">
-              <div onClick="showSlideOne()" class="slider__control is-active" id="slider_button_1"></div>
-              <div onClick="showSlideTwo()" class="slider__control" id="slider_button_2"></div>
-              <div onClick="showSlideThree()" class="slider__control" id="slider_button_3"></div>
+            <div class="slider__controls" role="tablist" aria-label="Slide controls">
+              <button onClick="showSlideOne()" class="slider__control is-active" id="slider_button_1" role="tab" aria-selected="true" aria-label="Show slide 1"></button>
+              <button onClick="showSlideTwo()" class="slider__control" id="slider_button_2" role="tab" aria-selected="false" aria-label="Show slide 2"></button>
+              <button onClick="showSlideThree()" class="slider__control" id="slider_button_3" role="tab" aria-selected="false" aria-label="Show slide 3"></button>
             </div>
           </div>
         </div>
@@ -41,6 +41,15 @@
   </div>
 </section>
 <script type="text/javascript">
+  function updateSliderAriaStates(activeIndex) {
+    for (var i = 1; i <= 3; i++) {
+      var button = document.getElementById('slider_button_' + i);
+      if (button) {
+        button.setAttribute('aria-selected', i === activeIndex ? 'true' : 'false');
+      }
+    }
+  }
+
   function showSlideOne() {
     setElementClass("slide_3", "is-hidden");
     setElementClass("slide_2", "is-hidden");
@@ -53,6 +62,7 @@
     removeElementClass("slider_button_3", "is-active");
     removeElementClass("slider_button_2", "is-active");
     setElementClass("slider_button_1", "is-active");
+    updateSliderAriaStates(1);
   }
 
   function showSlideTwo() {
@@ -67,6 +77,7 @@
     removeElementClass("slider_button_3", "is-active");
     removeElementClass("slider_button_1", "is-active");
     setElementClass("slider_button_2", "is-active");
+    updateSliderAriaStates(2);
   }
 
   function showSlideThree() {
@@ -81,5 +92,6 @@
     removeElementClass("slider_button_1", "is-active");
     removeElementClass("slider_button_2", "is-active");
     setElementClass("slider_button_3", "is-active");
+    updateSliderAriaStates(3);
   }
 </script>

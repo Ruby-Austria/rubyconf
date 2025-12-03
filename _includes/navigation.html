@@ -1,66 +1,66 @@
-<nav class="navbar" id="home_navbar">
+<nav class="navbar" id="home_navbar" role="navigation" aria-label="Main navigation">
   <div class="navbar__inner">
     <div class="navbar__logo">
-      <a href="/" >
-        <img src="/assets/images/logo.svg" alt="RubyConf Austria" />
+      <a href="/" aria-label="RubyConf Austria Home">
+        <img src="/assets/images/logo.svg" alt="RubyConf Austria" loading="lazy" />
       </a>
     </div>
 
-    <ul class="navbar__list">
-      <li class="navbar__list__item">
-        <a href="/coc" class="navbar__list__link">Code of Conduct</a>
+    <ul class="navbar__list" role="menubar">
+      <li class="navbar__list__item" role="none">
+        <a href="/coc" class="navbar__list__link" role="menuitem">Code of Conduct</a>
       </li>
-      <li class="navbar__list__item">
-        <a href="/#location" class="navbar__list__link">Location</a>
+      <li class="navbar__list__item" role="none">
+        <a href="/#location" class="navbar__list__link" role="menuitem">Location</a>
       </li>
-      <li class="navbar__list__item">
-        <a href="/#speakers" class="navbar__list__link">Speakers</a>
+      <li class="navbar__list__item" role="none">
+        <a href="/#speakers" class="navbar__list__link" role="menuitem">Speakers</a>
       </li>
-      <li class="navbar__list__item">
-        <a href="/#sponsors" class="navbar__list__link">Sponsors</a>
+      <li class="navbar__list__item" role="none">
+        <a href="/#sponsors" class="navbar__list__link" role="menuitem">Sponsors</a>
       </li>
-      <li class="navbar__list__item has-note">
-        <a href="https://www.papercall.io/rubyconfaustria2026" target="_blank" class="button button--secondary">Submit a talk</a>
+      <li class="navbar__list__item has-note" role="none">
+        <a href="https://www.papercall.io/rubyconfaustria2026" target="_blank" class="button button--secondary" role="menuitem">Submit a talk</a>
       </li>
-      <li class="navbar__list__item has-note">
-        <a href="/sponsoring" class="button button--secondary">Become a Sponsor</a>
+      <li class="navbar__list__item has-note" role="none">
+        <a href="/sponsoring" class="button button--secondary" role="menuitem">Become a Sponsor</a>
       </li>
     </ul>
   </div>
   <div class="navbar__mobile">
     <div class="navbar__mobile__inner">
       <div class="navbar__logo">
-        <a href="/" >
-          <img src="/assets/images/logo.svg" alt="RubyConf Austria" />
+        <a href="/" aria-label="RubyConf Austria Home">
+          <img src="/assets/images/logo.svg" alt="RubyConf Austria" loading="lazy" />
         </a>
       </div>
-      <div onClick="toggleMenu()" class="navbar_mobile__menu">
-        <img src="/assets/images/menu.svg"/>
-      </div>
+      <button onClick="toggleMenu()" class="navbar_mobile__menu" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <img src="/assets/images/menu.svg" alt="Menu" loading="lazy" />
+      </button>
     </div>
-    <div class="navbar__mobile__content">
+    <div class="navbar__mobile__content" id="mobile-menu" role="menu" aria-hidden="true">
       <div class="navbar__mobile__content__inner">
-        <div onClick="toggleMenu()" class="navbar_mobile__close">
-          <img src="/assets/images/close.svg"/>
-        </div>
-        <ul class="navbar__list">
-          <li class="navbar__list__item">
-            <a href="/coc" class="navbar__list__link">Code of Conduct</a>
+        <button onClick="toggleMenu()" class="navbar_mobile__close" aria-label="Close menu">
+          <img src="/assets/images/close.svg" alt="Close" loading="lazy" />
+        </button>
+        <ul class="navbar__list" role="menubar">
+          <li class="navbar__list__item" role="none">
+            <a href="/coc" class="navbar__list__link" role="menuitem">Code of Conduct</a>
           </li>
-          <li class="navbar__list__item">
-            <a href="/#location" class="navbar__list__link">Location</a>
+          <li class="navbar__list__item" role="none">
+            <a href="/#location" class="navbar__list__link" role="menuitem">Location</a>
           </li>
-          <li class="navbar__list__item">
-            <a href="/#speakers" class="navbar__list__link">Speakers</a>
+          <li class="navbar__list__item" role="none">
+            <a href="/#speakers" class="navbar__list__link" role="menuitem">Speakers</a>
           </li>
-          <li class="navbar__list__item">
-            <a href="/#sponsors" class="navbar__list__link">Sponsors</a>
+          <li class="navbar__list__item" role="none">
+            <a href="/#sponsors" class="navbar__list__link" role="menuitem">Sponsors</a>
           </li>
-          <li class="navbar__list__item">
-            <a href="https://www.papercall.io/rubyconfaustria2026" target="_blank" class="button button--secondary">Submit a talk</a>
+          <li class="navbar__list__item" role="none">
+            <a href="https://www.papercall.io/rubyconfaustria2026" target="_blank" class="button button--secondary" role="menuitem">Submit a talk</a>
           </li>
-          <li class="navbar__list__item">
-            <a href="/sponsoring" target="_blank" class="button button--secondary">Become a Sponsor</a>
+          <li class="navbar__list__item" role="none">
+            <a href="/sponsoring" target="_blank" class="button button--secondary" role="menuitem">Become a Sponsor</a>
           </li>
         </ul>
       </div>
@@ -70,6 +70,12 @@
 
 <script type="text/javascript">
   function toggleMenu() {
-    document.getElementsByClassName('navbar__mobile__content')[0].classList.toggle('is-visible');
+    var menu = document.getElementById('mobile-menu');
+    var menuButton = document.querySelector('.navbar_mobile__menu');
+    var isVisible = menu.classList.toggle('is-visible');
+    menu.setAttribute('aria-hidden', !isVisible);
+    if (menuButton) {
+      menuButton.setAttribute('aria-expanded', isVisible);
+    }
   }
 </script>

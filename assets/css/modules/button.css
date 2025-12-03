@@ -1,0 +1,19 @@
+/* Button styles */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+  outline: 0;
+  font-family: 'Kanit', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 15px 15px 0 0;
+  padding: 16px 16px;
+  transition: all .25s;
+}
