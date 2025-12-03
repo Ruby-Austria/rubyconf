@@ -1,5 +1,6 @@
 /* Colors and variables */
 :root {
+  /* Colors */
   --text-color-default: #FFFFFF;
   --text-color-dark: #111111;
   --primary-color: #E30818;
@@ -14,4 +15,65 @@
   --card-label-helper: #0C5A10;
   --line-color: #F1E8E9;
   --image-placeholder: #D9D9D9;
+  
+  /* Borders and dividers */
+  --border-light: rgba(255, 255, 255, 0.2);
+  --border-muted: #3B4D53;
+  
+  /* Shadows and overlays */
+  --shadow-sm: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+  --shadow-glow: 0px 0px 10px 2px rgba(239, 0, 29, 0.75);
+  --overlay-dark: rgba(3, 28, 36, 0.75);
+  --overlay-light: rgba(255, 255, 255, 0.05);
+  
+  /* Card profile gradient */
+  --gradient-card-profile: linear-gradient(0deg, rgba(3,28,36,0.75) 0%, rgba(3,28,36,0.3) 20%, rgba(3,28,36,0) 40%, rgba(3,28,36,0.1) 100%);
+  
+  /* Border Radius Scale */
+  --radius-sm: 8px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-2xl: 32px;
+  --radius-pill: 9999px;
+  
+  /* Spacing Scale (based on 4px base unit) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 28px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-15: 60px;
+  --space-20: 80px;
+  --space-24: 96px;
+  
+  /* Z-index Scale */
+  --z-base: 1;
+  --z-above: 2;
+  --z-content: 3;
+  --z-overlay: 4;
+  --z-label: 5;
+  --z-sticky: 100;
+  --z-modal: 200;
+  --z-toast: 300;
 }
+
+/*
+ * Breakpoint Reference (cannot use CSS variables in media queries)
+ * -----------------------------------------------------------------
+ * Mobile (small):    max-width: 600px
+ * Mobile (large):    min-width: 601px and max-width: 768px  
+ * Tablet:            min-width: 769px and max-width: 991px
+ * Desktop (small):   min-width: 992px and max-width: 1199px
+ * Desktop (large):   min-width: 1200px
+ * 
+ * Recommended consolidation (future refactor):
+ * - Mobile:  max-width: 768px    (combine small + large mobile)
+ * - Tablet:  max-width: 991px    (769px - 991px)
+ * - Desktop: min-width: 992px
+ */

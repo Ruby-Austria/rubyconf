@@ -88,7 +88,7 @@
   height: 80px;
   padding: 6px 40px;
   flex-shrink: 0;
-  z-index: 100;
+  z-index: var(--z-sticky);
 }
 
 .navbar__inner {
@@ -180,7 +180,7 @@
   top: 0;
   right: 0;
   bottom: 0;
-  z-index: 1;
+  z-index: var(--z-base);
   /* background: url('../images/hero_bg.png') center center / cover repeat-y scroll; */
 }
 /* background: url('../images/location_pin.svg') center center / contain no-repeat scroll; */
@@ -190,7 +190,7 @@
   position: relative;
   color: var(--text-color-default);
   padding: 40px 0 120px;
-  z-index: 3;
+  z-index: var(--z-content);
   width: 100%;
   margin: 0 auto;
   max-width: 1200px;
@@ -273,10 +273,10 @@
   left: 0;
   right: 0;
   bottom: -100px;
-  z-index: 4;
+  z-index: var(--z-overlay);
   height: 180px;
   background-color: var(--secondary-color);
-  border-radius: 32px;
+  border-radius: var(--radius-2xl);
   border: 1px solid var(--primary-color);
   padding: 30px 20px;
 }
@@ -291,7 +291,7 @@
 }
 
 .hero__stats .hero__stats__item + .hero__stats__item {
-  border-left: 1px solid rgba(255,255,255, 0.2);
+  border-left: 1px solid var(--border-light);
 }
 
 .hero__stats .hero__stats__number {
@@ -577,7 +577,7 @@
   text-align: center;
   color: var(--text-color-default);
   padding: 40px 40px 20px;
-  z-index: 3;
+  z-index: var(--z-content);
   flex: 1;
 }
 
@@ -633,7 +633,7 @@
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  z-index: 3;
+  z-index: var(--z-content);
 }
 
 .section__header {
@@ -714,7 +714,7 @@
 .section__article__map {
   position: relative;
   height: 100%;
-  border-radius: 32px;
+  border-radius: var(--radius-2xl);
   margin-left: 80px;
 }
 
@@ -898,7 +898,7 @@
 .card {
   height: 100%;
   width: 100%;
-  border-radius: 16px;
+  border-radius: var(--radius-lg);
   background-color: var(--text-color-default);
   position: relative;
   display: flex;
@@ -921,22 +921,22 @@
   display: inline-flex;
   align-items: center;
   padding: 0 24px 2px;
-  border-radius: 24px;
-  z-index: 5;
+  border-radius: var(--radius-xl);
+  z-index: var(--z-label);
   font-size: 20px;
   font-family: "Source Code Pro", monospace;
   font-weight: 600;
   text-transform: uppercase;
   color: var(--text-color-default);
   white-space: nowrap;
-  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, .2);
+  box-shadow: var(--shadow-sm);
 }
 
 .card .card__label.card__label--sm {
   height: 40px;
   top: -20px;
   padding: 0 12px 2px;
-  border-radius: 20px;
+  border-radius: var(--radius-pill);
   font-size: 16px;
 }
 
@@ -1049,13 +1049,13 @@
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 1;
-  border-radius: 10px;
+  z-index: var(--z-base);
+  border-radius: var(--radius-md);
   padding: 30px 30px;
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  background: linear-gradient(0deg, rgba(3,28,36,0.75) 0%, rgba(3,28,36,0.3) 20%, rgba(3,28,36,0) 40%, rgba(3,28,36,0.1) 100%);
+  background: var(--gradient-card-profile);
 }
 
 .card.card--profile .card-profile .card-profile__title {
@@ -1083,15 +1083,14 @@
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 1;
-  border-radius: 16px;
-  z-index: 1;
-  background-color: rgba(3,28,36, .75);
+  z-index: var(--z-base);
+  border-radius: var(--radius-lg);
+  background-color: var(--overlay-dark);
 }
 
 .card.card--announcement .card__body,
 .card.card--announcement .card__footer {
-  z-index: 2;
+  z-index: var(--z-above);
 }
 
 .card.card--announcement .card__title {
@@ -1181,7 +1180,7 @@
   height: 40px;
   width: 120px;
   background: url('../images/logotip.webp') center center / contain no-repeat scroll;
-  z-index: 2;
+  z-index: var(--z-above);
 }
 
 .card.card--presenter .card__body::after {
@@ -1249,7 +1248,7 @@
 
 .card.card--speaker:hover .card__image,
 .card.card--speaker:focus .card__image {
-  box-shadow: 0px 0px 10px 2px rgba(239,0,29,0.75);
+  box-shadow: var(--shadow-glow);
 }
 
 .card.card--speaker .card__body {
@@ -1398,7 +1397,7 @@
   justify-content: center;
   height: 30px;
   padding: 0 15px 2px;
-  border-radius: 10px;
+  border-radius: var(--radius-md);
   font-size: 16px;
   text-transform: uppercase;
   color: var(--text-color-default);
@@ -1680,7 +1679,7 @@
 .slider__item img {
   width: 100%;
   height: auto;
-  border-radius: 10px 10px 0 0;
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
 }
 
 .slider .slider__controls {
@@ -2057,13 +2056,13 @@
 }
 
 .table tbody tr:hover {
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: var(--overlay-light);
 }
 
 .table tbody tr td {
   font-size: 16px;
   padding: 15px 10px;
-  border-bottom: 1px solid rgba(255,255,255, 0.2);
+  border-bottom: 1px solid var(--border-light);
   vertical-align: middle;
 }
 
@@ -2097,6 +2096,22 @@
   background: url('../images/cancel_colored.svg') center center scroll;
 }
 
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS
+   ==========================================================================
+   
+   Current breakpoint structure:
+   - Mobile (small):  max-width: 600px
+   - Mobile (large):  601px - 768px
+   - Tablet:          769px - 991px
+   - Desktop (small): 992px - 1199px
+   - Desktop (large): 1200px+ (base styles)
+   
+   Note: Mobile nav code is duplicated between 600px and 768px queries.
+   Future refactor could consolidate to max-width: 768px for mobile.
+   ========================================================================== */
+
+/* Mobile Small - max-width: 600px */
 @media only screen and (max-width: 600px) {
   .page.page--pattern::before {
     display: none;
@@ -2164,7 +2179,7 @@
     bottom: 0;
     width: 280px;
     background-color: var(--secondary-color);
-    z-index: 100;
+    z-index: var(--z-sticky);
     transition: all .2s ease-in;
     visibility: visible;
     transform: translateX(201%);
@@ -2705,6 +2720,7 @@
   }
 }
 
+/* Mobile Large - 601px to 768px */
 @media only screen and (min-width: 601px) and (max-width: 768px) {
   .navbar {
     padding: 10px 20px;
@@ -2768,7 +2784,7 @@
     bottom: 0;
     width: 280px;
     background-color: var(--secondary-color);
-    z-index: 100;
+    z-index: var(--z-sticky);
     transition: all .2s ease-in;
     visibility: visible;
     transform: translateX(201%);
@@ -3202,6 +3218,7 @@
   }
 }
 
+/* Tablet - 769px to 991px */
 @media only screen and (min-width: 769px) and (max-width: 991px) {
   .page.page--pattern::before {
     display: none;
@@ -3331,7 +3348,7 @@
     justify-content: center;
     height: 30px;
     padding: 0 15px 2px;
-    border-radius: 10px;
+    border-radius: var(--radius-md);
     font-size: 16px;
     text-transform: uppercase;
     color: var(--text-color-default);
@@ -3399,6 +3416,7 @@
   }
 }
 
+/* Desktop Small - 992px to 1199px */
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .section {
     padding: 50px 40px 60px;
@@ -3416,10 +3434,10 @@
 
 .card--job {
   padding: 24px 24px;
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
   background-color: var(--secondary-color);
   color: var(--text-color-default);
-  border: 1px solid #3B4D53;
+  border: 1px solid var(--border-muted);
   display: flex;
   flex-direction: row;
 }
@@ -3520,6 +3538,7 @@
   background: url('../images/arrow.svg') center center no-repeat scroll;
 }
 
+/* Job Card - Mobile (max-width: 768px) */
 @media only screen and (max-width: 768px) {
   .card--job {
     flex-direction: column;
@@ -3567,6 +3586,7 @@
   }
 }
 
+/* Job Card - Tablet (769px to 991px) */
 @media only screen and (min-width: 769px) and (max-width: 991px) {
   .card--job .card__title {
     font-size: 28px;
