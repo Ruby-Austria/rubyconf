@@ -424,16 +424,6 @@
   display: block;
 }
 
-.hero__panel__location p::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  width: 48px;
-  height: 48px;
-  background: url('../images/location_pin.svg') center center / contain no-repeat scroll;
-}
 
 .hero__panel__speakers {
   padding: 30px 30px;
@@ -484,10 +474,6 @@
 
 .hero__content__footer > * {
   flex: 0 0 50%;
-  background-image: url('../images/hero_pattern.png');
-  background-position: center right;
-  background-repeat: no-repeat;
-  background-size: contain;
 }
 
 .hero__content__footer > *:first-child {
@@ -666,15 +652,6 @@
   width: 40px;
 }
 
-.section__title.has-goat::after {
-  content: "";
-  display: inline-block;
-  margin-left: 10px;
-  margin-top: -20px;
-  height: 54px;
-  width: 54px;
-  background: url('../images/title_goat.png') center center / contain scroll;
-}
 
 .section__title.is-regular {
   text-transform: unset;
@@ -1104,16 +1081,6 @@
   padding-right: 32px;
 }
 
-.card.card--announcement .card__title::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 32px;
-  height: 32px;
-  background: url('../images/arrow.svg') center center no-repeat scroll;
-
-}
 
 .card.card--announcement .card__footer {
   justify-content: flex-start;
@@ -1172,26 +1139,7 @@
   position: relative;
 }
 
-.card.card--presenter .card__body::before {
-  content: '';
-  position: absolute;
-  bottom: 10px;
-  right: 20px;
-  height: 40px;
-  width: 120px;
-  background: url('../images/logotip.webp') center center / contain no-repeat scroll;
-  z-index: var(--z-above);
-}
 
-.card.card--presenter .card__body::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  width: 120px;
-  background: url('../images/milje-pattern-card.svg') bottom right / cover no-repeat scroll;
-}
 
 .card.card--presenter .card__role {
   position: relative;
@@ -1296,13 +1244,6 @@
   background-image: url('../images/linkedin.svg');
 }
 
-.card.card--speaker .card__socials .card__socials__link.for-instagram {
-  background-image: url('../images/instagram.svg');
-}
-
-.card.card--speaker .card__socials .card__socials__link.for-mastodon {
-  background-image: url('../images/mastodon.svg');
-}
 
 .benefits {
   display: grid;
@@ -1329,9 +1270,6 @@
   background-position: top left;
 }
 
-.benefits .benefits__item:nth-child(2n + 1)::before {
-  background-image: url('../images/dot_bullet.png');
-}
 
 .benefit .benefit__title {
   font-size: 28px;
@@ -1464,13 +1402,6 @@
   background-image: url('../images/linkedin.svg');
 }
 
-.profile__links__item.for-instagram {
-  background-image: url('../images/instagram.svg');
-}
-
-.profile__links__item.for-mastodon {
-  background-image: url('../images/mastodon.svg');
-}
 
 .profile__links .profile__links__item + .profile__links__item {
   margin-left: 20px;
@@ -1571,10 +1502,6 @@
   display: inline-block;
   padding-left: 56px;
   min-height: 36px;
-  background-image: url('../images/dot_bullet.png');
-  background-size: 36px 36px;
-  background-position: top 2px left;
-  background-repeat: no-repeat;
 }
 
 .tabs .tabs__pane.is-hidden {
@@ -1809,16 +1736,8 @@
   background-image: url('../images/linkedin.svg');
 }
 
-.footer__socials .footer__socials__link.for-instagram {
-  background-image: url('../images/instagram.svg');
-}
-
 .footer__socials .footer__socials__link.for-twitter {
   background-image: url('../images/twitter.svg');
-}
-
-.footer__socials .footer__socials__link.for-mastodon {
-  background-image: url('../images/mastodon.svg');
 }
 
 .footer__socials .footer__socials__item + .footer__socials__item {
@@ -1936,13 +1855,6 @@
   background-image: url('../images/linkedin.svg');
 }
 
-.footer__links__item.for-instagram {
-  background-image: url('../images/instagram.svg');
-}
-
-.footer__links__item.for-mastodon {
-  background-image: url('../images/mastodon.svg');
-}
 
 .footer__links .footer__links__item + .footer__links__item {
   margin-left: 20px;
@@ -3224,9 +3136,6 @@
     display: none;
   }
 
-  .hero::after {
-    background: url('../images/milje-pattern-1.png') top right / auto 35% no-repeat scroll;
-  }
 
   .hero__subscript {
     font-size: 36px;
@@ -3514,29 +3423,12 @@
   margin-right: 8px;
 }
 
-.card--job .card-job__location::before {
-  width: 24px;
-  background: url('../images/pin.svg') center center / contain no-repeat scroll;
-}
-
-.card--job .card-job__price::before {
-  width: 28px;
-  background: url('../images/price.svg') center center / contain no-repeat scroll;
-}
 
 .card--job .card-job__link {
   color: var(--text-color-default);
   text-decoration: none;
 }
 
-.card--job .card-job__link::after {
-  content: '';
-  display: inline-block;
-  height: 32px;
-  width: 32px;
-  margin-left: 8px;
-  background: url('../images/arrow.svg') center center no-repeat scroll;
-}
 
 /* Job Card - Mobile (max-width: 768px) */
 @media only screen and (max-width: 768px) {
