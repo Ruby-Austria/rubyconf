@@ -297,6 +297,62 @@
   padding: 30px 20px;
 }
 
+.hero__stats__slider {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.hero__stats__slider__inner {
+  flex: 1;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.hero__stats__arrow {
+  display: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--text-color-default);
+  background-color: var(--secondary-color);
+  color: var(--text-color-default);
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.hero__stats__arrow:hover,
+.hero__stats__arrow:focus {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--text-color-default);
+}
+
+.hero__stats__arrow svg {
+  width: 20px;
+  height: 20px;
+}
+
+.hero__stats__arrow--prev {
+  left: 10px;
+}
+
+.hero__stats__arrow--next {
+  right: 10px;
+}
+
 .hero__stats .hero__stats__item {
   padding: 0px 30px;
   display: flex;
@@ -304,10 +360,49 @@
   align-items: center;
   flex: 1;
   text-align: center;
+  width: auto;
+  position: relative;
+}
+
+/* Desktop: show all items */
+.hero__stats .hero__stats__item.is-showing,
+.hero__stats .hero__stats__item.is-hidden {
+  display: flex;
+  opacity: 1;
 }
 
 .hero__stats .hero__stats__item + .hero__stats__item {
   border-left: 1px solid var(--border-light);
+}
+
+.hero__stats__controls {
+  margin: 20px 0 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.hero__stats__control {
+  display: inline-flex;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--text-color-default);
+  opacity: 0.5;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  transition: opacity 0.2s ease;
+}
+
+.hero__stats__control:hover {
+  opacity: 1;
+}
+
+.hero__stats__control.is-active {
+  background-color: var(--primary-color);
+  opacity: 1;
 }
 
 .hero__stats .hero__stats__number {
@@ -2697,7 +2792,7 @@
   }
 
   .hero {
-    padding: 120px 20px 40px;
+    padding: 120px 20px 140px;
   }
 
   .hero__inner {
@@ -2751,21 +2846,48 @@
   }
 
   .hero__stats {
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 20px;
-    row-gap: 20px;
+    position: absolute;
     height: auto;
-    bottom: 0;
+    bottom: -100px;
+    padding: 30px 50px 50px;
+  }
+
+  .hero__stats__slider__inner {
+    position: relative;
+    min-height: 120px;
+  }
+
+  .hero__stats__arrow {
+    display: flex;
+  }
+
+  .hero__stats .hero__stats__item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 20px;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .hero__stats .hero__stats__item.is-showing {
+    display: flex;
+    opacity: 1;
+    position: relative;
+  }
+
+  .hero__stats .hero__stats__item.is-hidden {
+    display: none;
   }
 
   .hero__stats .hero__stats__item + .hero__stats__item {
     border-left: none;
   }
 
-  .hero__stats .hero__stats__item {
-    padding: 0 20px;
+  .hero__stats__controls {
+    display: flex;
   }
 
   .hero__logo {
@@ -3302,7 +3424,7 @@
   }
 
   .hero {
-    padding: 120px 20px 40px;
+    padding: 120px 20px 140px;
   }
 
   .hero__inner {

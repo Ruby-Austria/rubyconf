@@ -5,33 +5,55 @@ layout: default
   <header class="hero">
     <img src="/assets/images/hero_bg.png" alt="RubyConf Austria Hero Background">
     <div class="hero__inner">
-      <div class="hero__stats">
-        <div class="hero__stats__item">
-          <div class="hero__stats__number">1</div>
-          <div class="hero__stats__text">Single Track</div>
-        </div>
-        <div class="hero__stats__item">
-          <div class="hero__stats__number">2</div>
-          <div class="hero__stats__text">
-            Keynote
-            <span class="display--block">Speakers</span>
+      <div class="hero__stats" role="region" aria-label="Conference statistics">
+        <div class="hero__stats__slider">
+          <button onClick="prevHeroStat()" class="hero__stats__arrow hero__stats__arrow--prev" aria-label="Previous statistic">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="hero__stats__slider__inner">
+            <div class="hero__stats__item is-showing" id="hero_stat_1" role="group" aria-roledescription="slide" aria-label="Slide 1 of 6">
+              <div class="hero__stats__number">1</div>
+              <div class="hero__stats__text">Single Track</div>
+            </div>
+            <div class="hero__stats__item is-hidden" id="hero_stat_2" role="group" aria-roledescription="slide" aria-label="Slide 2 of 6">
+              <div class="hero__stats__number">2</div>
+              <div class="hero__stats__text">
+                Keynote
+                <span class="display--block">Speakers</span>
+              </div>
+            </div>
+            <div class="hero__stats__item is-hidden" id="hero_stat_3" role="group" aria-roledescription="slide" aria-label="Slide 3 of 6">
+              <div class="hero__stats__number">~12</div>
+              <div class="hero__stats__text">Talks</div>
+            </div>
+            <div class="hero__stats__item is-hidden" id="hero_stat_4" role="group" aria-roledescription="slide" aria-label="Slide 4 of 6">
+              <div class="hero__stats__number">2-4</div>
+              <div class="hero__stats__text">Workshops</div>
+            </div>
+            <div class="hero__stats__item is-hidden" id="hero_stat_5" role="group" aria-roledescription="slide" aria-label="Slide 5 of 6">
+              <div class="hero__stats__number">1</div>
+              <div class="hero__stats__text">Vienna.rb Meetup</div>
+            </div>
+            <div class="hero__stats__item is-hidden" id="hero_stat_6" role="group" aria-roledescription="slide" aria-label="Slide 6 of 6">
+              <div class="hero__stats__number">1-2</div>
+              <div class="hero__stats__text">Social Activities</div>
+            </div>
           </div>
-        </div>
-        <div class="hero__stats__item">
-          <div class="hero__stats__number">~12</div>
-          <div class="hero__stats__text">Talks</div>
-        </div>
-        <div class="hero__stats__item">
-          <div class="hero__stats__number">2-4</div>
-          <div class="hero__stats__text">Workshops</div>
-        </div>
-        <div class="hero__stats__item">
-          <div class="hero__stats__number">1</div>
-          <div class="hero__stats__text">Vienna.rb Meetup</div>
-        </div>
-        <div class="hero__stats__item">
-          <div class="hero__stats__number">1-2</div>
-          <div class="hero__stats__text">Social Activities</div>
+          <button onClick="nextHeroStat()" class="hero__stats__arrow hero__stats__arrow--next" aria-label="Next statistic">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="hero__stats__controls" role="tablist" aria-label="Statistics controls">
+            <button onClick="showHeroStat(1)" class="hero__stats__control is-active" id="hero_stat_button_1" role="tab" aria-selected="true" aria-label="Show statistic 1"></button>
+            <button onClick="showHeroStat(2)" class="hero__stats__control" id="hero_stat_button_2" role="tab" aria-selected="false" aria-label="Show statistic 2"></button>
+            <button onClick="showHeroStat(3)" class="hero__stats__control" id="hero_stat_button_3" role="tab" aria-selected="false" aria-label="Show statistic 3"></button>
+            <button onClick="showHeroStat(4)" class="hero__stats__control" id="hero_stat_button_4" role="tab" aria-selected="false" aria-label="Show statistic 4"></button>
+            <button onClick="showHeroStat(5)" class="hero__stats__control" id="hero_stat_button_5" role="tab" aria-selected="false" aria-label="Show statistic 5"></button>
+            <button onClick="showHeroStat(6)" class="hero__stats__control" id="hero_stat_button_6" role="tab" aria-selected="false" aria-label="Show statistic 6"></button>
+          </div>
         </div>
       </div>
     </div>
@@ -78,3 +100,84 @@ layout: default
   <hr class="section__divider" />
   {% include partners_section.html %}
 </main>
+<script type="text/javascript">
+  var currentHeroStat = 1;
+  var totalHeroStats = 6;
+
+  function updateHeroStatAriaStates(activeIndex) {
+    for (var i = 1; i <= totalHeroStats; i++) {
+      var button = document.getElementById('hero_stat_button_' + i);
+      if (button) {
+        button.setAttribute('aria-selected', i === activeIndex ? 'true' : 'false');
+      }
+    }
+  }
+
+  function showHeroStat(index) {
+    if (index < 1) index = totalHeroStats;
+    if (index > totalHeroStats) index = 1;
+    
+    currentHeroStat = index;
+    
+    for (var i = 1; i <= totalHeroStats; i++) {
+      var stat = document.getElementById('hero_stat_' + i);
+      var button = document.getElementById('hero_stat_button_' + i);
+      
+      if (i === index) {
+        removeElementClass('hero_stat_' + i, 'is-hidden');
+        setElementClass('hero_stat_' + i, 'is-showing');
+        setElementClass('hero_stat_button_' + i, 'is-active');
+      } else {
+        setElementClass('hero_stat_' + i, 'is-hidden');
+        removeElementClass('hero_stat_' + i, 'is-showing');
+        removeElementClass('hero_stat_button_' + i, 'is-active');
+      }
+    }
+    updateHeroStatAriaStates(index);
+  }
+
+  function nextHeroStat() {
+    showHeroStat(currentHeroStat + 1);
+  }
+
+  function prevHeroStat() {
+    showHeroStat(currentHeroStat - 1);
+  }
+
+  // Auto-advance slider on mobile
+  document.addEventListener('DOMContentLoaded', function() {
+    var heroStatsElement = document.querySelector('.hero__stats');
+    if (heroStatsElement && window.innerWidth <= 768) {
+      // Touch swipe support
+      var touchStartX = 0;
+      var touchEndX = 0;
+
+      heroStatsElement.addEventListener('touchstart', function(e) {
+        touchStartX = e.changedTouches[0].screenX;
+      }, { passive: true });
+
+      heroStatsElement.addEventListener('touchend', function(e) {
+        touchEndX = e.changedTouches[0].screenX;
+        handleHeroSwipe();
+      }, { passive: true });
+
+      function handleHeroSwipe() {
+        var diffX = touchStartX - touchEndX;
+        if (Math.abs(diffX) > 50) {
+          if (diffX > 0) {
+            nextHeroStat();
+          } else {
+            prevHeroStat();
+          }
+        }
+      }
+
+      // Auto-advance every 3 seconds
+      setInterval(function() {
+        if (window.innerWidth <= 768) {
+          nextHeroStat();
+        }
+      }, 3000);
+    }
+  });
+</script>
