@@ -13,6 +13,22 @@
   margin: 0.5rem 0;
 }
 
+.location-super-text--with-circle {
+  position: relative;
+  display: inline-block;
+}
+
+.location-super-text__circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: auto;
+  z-index: -1;
+  pointer-events: none;
+}
+
 .button--lg {
   padding: 24px 32px;
   font-size: 24px;
@@ -595,8 +611,36 @@
 }
 
 .section.section--location {
+  background-color: var(--secondary-color);
+  color: var(--text-color-default);
+}
+
+.section.section--location h3,
+.section.section--location .section__article__text,
+.section.section--location .location-super-text {
+  color: var(--text-color-default);
+}
+
+.section.section--location .text--primary {
+  color: var(--text-color-default);
+}
+
+.section.section--location .text--primary:hover {
+  color: var(--primary-color);
+}
+
+.section.section--location .slider .slider__control {
   background-color: var(--text-color-default);
-  color: var(--text-color-dark);
+  opacity: 0.5;
+}
+
+.section.section--location .slider .slider__control:hover {
+  opacity: 1;
+}
+
+.section.section--location .slider .slider__control.is-active {
+  background-color: var(--primary-color);
+  opacity: 1;
 }
 
 .section.section--partners {
