@@ -29,3 +29,11 @@
 - name: EuRuKo2025
   image: /assets/images/partners/euruko.png
   link: https://2025.euruko.org/
+
+- name: RubyCommunityConference
+  image: /assets/images/partners/rubycommunityconf.webp
+  link: https://www.rubycommunityconference.com/
+
+- name: Technologieplauscherl
+  image: /assets/images/partners/tp-button.jpg
+  link: https://technologieplauscherl.at/

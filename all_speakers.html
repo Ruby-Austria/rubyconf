@@ -7,7 +7,7 @@ layout: default
   <header class="header header-speakers">
     <div class="header__content">
       <h1 class="header__title">
-        Speakers
+        Speakers & Performers
       </h1>
     </div>
   </header>
@@ -17,7 +17,7 @@ layout: default
         {% for speaker in site.data.speakers %}
         <div class="cards__item col--1-4 col--md-1-2 col--sm-100">
           <div class="card card--speaker">
-            <a href="{{ speaker.link }}" aria-label="Learn more about {{ speaker.name }}">
+            <a href="{{ speaker.link }}" target="_blank" aria-label="Learn more about {{ speaker.name }}">
               <div class="card__image" style="background-image: url('{{ speaker.image }}');" role="img" aria-label="Photo of {{ speaker.name }}"></div>
             </a>
             <div class="card__body">
@@ -40,6 +40,9 @@ layout: default
       <div class="text--align-center">
         <a href="/sponsoring" class="button button--primary">
           Become a Sponsor
+        </a>
+        <a href="/team" class="button button--primary">
+          Meet the Team
         </a>
       </div>
     </div>

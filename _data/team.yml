@@ -1,0 +1,92 @@
+- name: Muhamed Isabegovic
+  image: /assets/images/team/muhamed.jpg
+  link: https://www.muhamed.at/
+  note: Founder & Organizer RubyConf Austria
+  socials:
+    - type: twitter
+      url: https://x.com/m_isabegovic
+- name: Zehra Buco
+  image: /assets/images/team/zehra.png
+  link: 
+  note: Designer
+  socials: []
+- name: Hans Schedlitz
+  image: /assets/images/team/hans.png
+  link: https://www.hansschnedlitz.com/
+  note: Host of Vienna.rb | Organizing & Program Committee
+  socials:
+    - type: twitter
+      url: https://x.com/hschnedlitz
+- name: Christoph Lipautz
+  image: /assets/images/team/christoph.png
+  link: https://x.com/lipdaguit
+  note: Organizing & Program Committee
+  socials:
+    - type: twitter
+      url: https://x.com/lipdaguit
+- name: Zuzanna Kusznir (MC)
+  image: /assets/images/team/Zuzzana - web.png
+  link: https://x.com/zuzanna_kusznir
+  note: MC & Program Committee
+  socials:
+    - type: twitter
+      url: https://x.com/zuzanna_kusznir
+- name: Rosa Gutierrez
+  image: /assets/images/team/rosa.png
+  link: https://www.rubyevents.org/profiles/rosa
+  note: Program Committee
+  socials: []
+- name: Carmen Huidobro
+  image: /assets/images/team/carmen.png
+  link: https://carmenh.dev/
+  note: Program Committee
+  socials: []
+- name: Adrian Marin
+  image: /assets/images/team/adrian.png
+  link: https://www.rubyevents.org/profiles/adrianthedev
+  note: Program Committee
+  socials:
+      - type: twitter
+        url: https://x.com/adrianthedev
+- name: Stephen Margheim
+  image: /assets/images/team/stephen.png
+  link: https://www.rubyevents.org/profiles/fractaledmind
+  note: Program Committee
+  socials:
+      - type: twitter
+        url: https://x.com/fractaledmind
+- name: Paul Campbell
+  image: /assets/images/team/paul.png
+  link: https://x.com/paulca
+  note: Program Committee
+  socials:
+      - type: twitter
+        url: https://x.com/paulca
+- name: Yudai Takada
+  image: /assets/images/team/yudai.png
+  link: https://www.rubyevents.org/profiles/ydah
+  note: Program Committee
+  socials:
+      - type: twitter
+        url: https://www.x.com/ydah_
+- name: Lucian Ghinda
+  image: /assets/images/team/lucian.png
+  link: https://www.rubyevents.org/profiles/lucianghinda
+  note: Program Committee
+  socials:
+      - type: twitter
+        url: https://www.x.com/lucianghinda
+- name: Johannes Daxboeck
+  image: /assets/images/team/johannes.png
+  link: https://www.linkedin.com/in/johdax/
+  note: Program Committee
+  socials:
+      - type: linkedin
+        url: https://www.linkedin.com/in/johdax/
+- name: Abdelkader Boudih
+  image: /assets/images/team/seuros.png
+  link: https://x.com/seuros
+  note: Program Committee
+  socials:
+      - type: twitter
+        url: https://x.com/seuros

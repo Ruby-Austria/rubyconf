@@ -1,0 +1,64 @@
+<section class="section section--agenda" id="agenda">
+  <div class="section__content">
+    <div class="tabs">
+      <div class="tabs__nav">
+        <div onClick="showAgendaDayOne()" class="tabs__nav__item rubyconf" id="day_one_div"><span>29th May</span></div>
+        <div onClick="showAgendaDayTwo()" class="tabs__nav__item rubyconf is-active" id="day_two_div"><span>30th May</span></div>
+        <div onClick="showAgendaDayThree()" class="tabs__nav__item rubyconf" id="day_three_div"><span>31st May</span></div>
+      </div>
+      <div class="tabs__pane is-hidden" id="day_one">
+        {% include agenda/agenda_day_one.html %}
+      </div>
+      <div class="tabs__pane" id="day_two">
+        {% include agenda/agenda_day_two.html %}
+      </div>
+      <div class="tabs__pane is-hidden" id="day_three">
+        {% include agenda/agenda_day_three.html %}
+      </div>
+    </div>
+  </div>
+</section>
+<script type="text/javascript">
+  function showAgendaDayOne() {
+    setElementClass("day_two", "is-hidden");
+    setElementClass("day_three", "is-hidden");
+    removeElementClass("day_one", "is-hidden");
+
+    removeElementClass("day_two_div", "is-active");
+    removeElementClass("day_three_div", "is-active");
+    setElementClass("day_one_div", "is-active");
+  }
+
+  function showAgendaDayTwo() {
+    setElementClass("day_one", "is-hidden");
+    setElementClass("day_three", "is-hidden");
+    removeElementClass("day_two", "is-hidden");
+
+    removeElementClass("day_one_div", "is-active");
+    removeElementClass("day_three_div", "is-active");
+    setElementClass("day_two_div", "is-active");
+  }
+
+  function showAgendaDayThree() {
+    setElementClass("day_one", "is-hidden");
+    setElementClass("day_two", "is-hidden");
+    removeElementClass("day_three", "is-hidden");
+
+    removeElementClass("day_one_div", "is-active");
+    removeElementClass("day_two_div", "is-active");
+    setElementClass("day_three_div", "is-active");
+  }
+
+  function removeElementClass(id, style_class) {
+    var element = document.getElementById(id);
+    if (element.classList.contains(style_class)) {
+      element.classList.remove(style_class);
+    }
+  }
+  function setElementClass(id, style_class) {
+    var element = document.getElementById(id);
+    if (!element.classList.contains(style_class)) {
+      element.classList.add(style_class);
+    }
+  }
+</script>

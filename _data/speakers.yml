@@ -2,6 +2,7 @@
   image: /assets/images/speakers/dave_thomas.png
   link: https://pragdave.me/
   note: Author of The Pragmatic Programmer, Programming Ruby, Agile Web Development With Rails, Programming Elixir...
+  spotlight: true
   socials:
     - type: twitter
       url: https://x.com/pragdave
@@ -9,6 +10,7 @@
   image: /assets/images/speakers/chad_fowler.png
   link: https://chadfowler.com/
   note: CTO & General Partner, BlueYard
+  spotlight: true
   socials:
     - type: twitter
       url: https://x.com/chadfowler
@@ -16,6 +18,7 @@
   image: /assets/images/speakers/Jose - web.png
   link: https://x.com/josevalim?lang=en
   note: Creator of the Elixir programming language and Chief Adoption Officer at Dashbit, the company behind Tidewave and Livebook.
+  spotlight: true
   socials:
     - type: twitter
       url: https://x.com/josevalim?lang=en
@@ -23,21 +26,47 @@
   image: /assets/images/speakers/Zuzzana - web.png
   link: https://x.com/zuzanna_kusznir
   note: Software engineer at Momentum | wroclove.rb host
+  spotlight: true
   socials:
     - type: twitter
       url: https://x.com/zuzanna_kusznir
+- name: Chorus Juventus
+  image: /assets/images/speakers/choir.jpg
+  link: https://wsk.at/juventus
+  note: Wiener Sängerknaben
+  spotlight: true
+  socials: []
 - name: Iman Jahić Hošić
   image: /assets/images/speakers/Iman - web.png
   link: /#speakers
   note: Piano/Klavier
+  spotlight: true
   socials: []
 - name: Nadir Hošić
   image: /assets/images/speakers/Nadir - web.png
   link: /#speakers
   note: Piano/Klavier
+  spotlight: true
   socials: []
 - name: Julia Siedl
   image: /assets/images/speakers/Julia - web.png
   link: https://juliasiedl.com
   note: Piano/Klavier
+  spotlight: true
   socials: []
+- name: Obie Fernandez
+  image: /assets/images/speakers/obiefernandez.jpg
+  link: https://obiefernandez.com/
+  note: Consultant, 30 year veteran of professional software development, serial entrepreneur, and best-selling author. Chief Scientist at @OlympiaAI
+  spotlight: false
+  socials:
+    - type: twitter
+      url: https://x.com/obie
+- name: Armin Ronacher
+  image: /assets/images/speakers/armin-ronacher.jpg
+  link: https://ronacher.eu/
+  note: Creator of Flask
+  spotlight: false
+  socials:
+    - type: twitter
+      url: https://x.com/mitsuhiko

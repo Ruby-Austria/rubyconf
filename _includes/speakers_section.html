@@ -3,9 +3,10 @@
     <h2 class="speakers__spotlight-title">SPOTLIGHT</h2>
       <div class="cards speakers__cards">
         {% for speaker in site.data.speakers %}
+        {% if speaker.spotlight %}
         <div class="cards__item col--1-4 col--md-1-2 col--sm-100">
           <div class="card card--speaker">
-            <a href="{{ speaker.link }}" aria-label="Learn more about {{ speaker.name }}">
+            <a href="{{ speaker.link }}" target="_blank" aria-label="Learn more about {{ speaker.name }}">
               <div class="card__image" style="background-image: url('{{ speaker.image }}');" role="img" aria-label="Photo of {{ speaker.name }}"></div>
             </a>
             <div class="card__body">
@@ -23,6 +24,7 @@
             </div>
           </div>
         </div>
+        {% endif %}
         {% endfor %}
       </div>
     <div class="text--align-center">
