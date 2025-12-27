@@ -70,3 +70,105 @@
   socials:
     - type: twitter
       url: https://x.com/mitsuhiko
+- name: Marco Roth
+  image: /assets/images/speakers/marco.jpg
+  link: https://marcoroth.dev/
+  note: Full-Stack Web-Developer based in 🇨🇭 Basel, Switzerland.
+  spotlight: false
+  socials:
+    - type: twitter
+      url: https://x.com/marcoroth_
+- name: Maedi Prichard
+  image: /assets/images/speakers/maedi.png
+  link: https://maedi.com/
+  note: Creator of Raindeer
+  spotlight: false
+  socials:
+    - type: twitter
+      url: https://x.com/maediprichard
+- name: Bozhidar Batsov
+  image: /assets/images/speakers/bbatsov.jpg
+  link: https://x.com/bbatsov
+  note: Hacker. Lover of parentheses. Emacs fanatic. Author of RuboCop, CIDER, Emacs Prelude and Projectile. Maintainer of nREPL. 
+  spotlight: false
+  socials:
+    - type: twitter
+      url: https://x.com/bbatsov
+- name: Kinsey Durham Grace
+  image: /assets/images/speakers/kinsey.png
+  link: https://x.com/KinseyAnnDurham
+  note: GitHub’s Coding Agent Core team
+  spotlight: false
+  socials:
+    - type: twitter
+      url: https://x.com/KinseyAnnDurham
+- name: Vladimir Dementeyev
+  image: /assets/images/speakers/vladimir.jpg
+  link: https://x.com/palkan_tula
+  note: A mathematician who found his happiness in Go, contributing to open source and being an Evil Martian. Author of AnyCable, and many yet unknown ukulele melodies.
+  spotlight: false
+  socials:
+    - type: twitter
+      url: https://x.com/palkan_tula
+- name: Charles Oliver Nutter
+  image: /assets/images/speakers/charles.jpg
+  link: https://x.com/headius
+  note: The JRuby Guy
+  spotlight: false
+  socials:
+    - type: twitter
+      url: https://x.com/headius
+- name: Dalma Boros
+  image: /assets/images/speakers/placeholder.webp
+  link: https://www.dalmaboros.com/
+  note: Ruby engineer
+  spotlight: false
+  socials:
+    - type: twitter
+      url: https://www.dalmaboros.com/
+- name: Jess Sullivan
+  image: /assets/images/speakers/placeholder.webp
+  link: https://www.dalmaboros.com/
+  note: Ruby engineer
+  spotlight: false
+  socials: []
+- name: Andy Maleh
+  image: /assets/images/speakers/andy.jpeg
+  link: https://x.com/AndyObtiva
+  note: Fukuoka Ruby 2025/2022 Winner. RubyConf/RailsConf/EclipseCon Speaker. Glimmer Ruby Gem Creator. Drummer/Snowboarder/Curler. Habs/Alouettes/Red Sox/Warriors fan.
+  spotlight: false
+  socials:
+    - type: twitter
+      url: https://x.com/AndyObtiva
+- name: Ljubomir Marković
+  image: /assets/images/speakers/ljubomir.jpg
+  link: https://tcb.si/
+  note: Founder of wheretofocus.com, consultant and experienced software engineer, specializing in building robust, scalable back-end systems with a focus on clean, maintainable code.
+  spotlight: false
+  socials:
+    - type: linkedin
+      url: https://www.linkedin.com/in/ljubomirmarkovic/
+- name: Vlad Dyachenko
+  image: /assets/images/speakers/vlad.jpg
+  link: https://wowinter13.com/
+  note: Staff Engineer / OSS Contributor
+  spotlight: false
+  socials:
+    - type: twitter
+      url: https://x.com/not_wowinter13
+- name: Andrzej Krzywda
+  image: /assets/images/speakers/andrzej.png
+  link: https://arkency.com/
+  note: Passionate about Rails since 2004
+  spotlight: false
+  socials:
+    - type: twitter
+      url: https://x.com/andrzejkrzywda
+- name: Bernard Banta
+  image: /assets/images/speakers/bernard.png
+  link: https://www.linkedin.com/in/banta
+  note: CTO and co-founder of Finplus Group and the Chairman of the African Ruby Community
+  spotlight: false
+  socials:
+    - type: twitter
+      url: http://twitter.com/Bantab
