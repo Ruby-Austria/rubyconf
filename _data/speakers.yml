@@ -172,3 +172,11 @@
   socials:
     - type: twitter
       url: http://twitter.com/Bantab
+- name: John Gallagher
+  image: /assets/images/speakers/john.jpeg
+  link: https://www.linkedin.com/in/synapticmishap/
+  note: A joyful programming coach and Ruby engineer.
+  spotlight: false
+  socials:
+    - type: linkedin
+      url: https://www.linkedin.com/in/synapticmishap/
