@@ -119,7 +119,7 @@
     - type: twitter
       url: https://x.com/headius
 - name: Dalma Boros
-  image: /assets/images/speakers/placeholder.webp
+  image: /assets/images/speakers/dalma.jpg
   link: https://www.dalmaboros.com/
   note: Ruby engineer
   spotlight: false
@@ -127,7 +127,7 @@
     - type: twitter
       url: https://www.dalmaboros.com/
 - name: Jess Sullivan
-  image: /assets/images/speakers/placeholder.webp
+  image: /assets/images/speakers/jess.jpg
   link: https://www.dalmaboros.com/
   note: Ruby engineer
   spotlight: false
