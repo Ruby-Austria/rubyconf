@@ -128,10 +128,12 @@
       url: https://www.dalmaboros.com/
 - name: Jess Sullivan
   image: /assets/images/speakers/jess.jpg
-  link: https://www.dalmaboros.com/
+  link: https://www.linkedin.com/in/jess-sullivan-1ab72ba1/
   note: Ruby engineer
   spotlight: false
-  socials: []
+  socials:
+    - type: linkedin
+      url: https://www.linkedin.com/in/jess-sullivan-1ab72ba1/
 - name: Andy Maleh
   image: /assets/images/speakers/andy.jpeg
   link: https://x.com/AndyObtiva
