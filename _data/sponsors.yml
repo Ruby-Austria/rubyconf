@@ -2,3 +2,7 @@
   image: /assets/images/sponsors/typesense.png
   link: https://typesense.org/
   label: Gold Online
+- name: Avo
+  image: /assets/images/sponsors/avo-logo.png
+  link: https://avohq.io/rails-admin
+  label: Online
