@@ -1,3 +1,7 @@
+- name: GitButler
+  image: /assets/images/sponsors/GitButler.png
+  link: https://gitbutler.com/
+  label: Gold Online
 - name: Typesense
   image: /assets/images/sponsors/typesense.png
   link: https://typesense.org/
