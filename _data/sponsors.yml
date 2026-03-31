@@ -1,9 +1,9 @@
 - name: Platogo 
-  image: /assets/images/sponsors/Platogo_logo.png
+  image: /assets/images/sponsors/platogo.png
   link: https://platogo.com/
   label: Booth
 - name: GitButler
-  image: /assets/images/sponsors/GitButler.png
+  image: /assets/images/sponsors/gitb.png
   link: https://gitbutler.com/
   label: Gold Online
 - name: Typesense
@@ -15,10 +15,10 @@
   link: https://avohq.io/rails-admin
   label: Online
 - name: Usput.ba
-  image: /assets/images/sponsors/usput-logo.png
+  image: /assets/images/sponsors/usput.png
   link: https://usput.ba
   label: Online
 - name: Doctaphone
-  image: /assets/images/sponsors/doctaphone.png
+  image: /assets/images/sponsors/docta.png
   link: https://doctaphone.com
   label: Online
