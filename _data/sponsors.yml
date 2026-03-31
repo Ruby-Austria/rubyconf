@@ -1,3 +1,7 @@
+- name: Platogo 
+  image: /assets/images/sponsors/Platogo_logo.png
+  link: https://platogo.com/
+  label: Booth
 - name: GitButler
   image: /assets/images/sponsors/GitButler.png
   link: https://gitbutler.com/

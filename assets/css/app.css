@@ -1664,6 +1664,10 @@
   background-color: var(--card-label-bronze);
 }
 
+.sponsors-group__label.card-label--booth {
+  background-color: var(--card-label-ruby);
+}
+
 .sponsors-group__label.card-label--online {
   background-color: var(--card-label-online);
 }
