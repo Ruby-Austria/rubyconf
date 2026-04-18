@@ -102,14 +102,6 @@
   socials:
     - type: twitter
       url: https://x.com/KinseyAnnDurham
-- name: Vladimir Dementeyev
-  image: /assets/images/speakers/vladimir.jpg
-  link: https://x.com/palkan_tula
-  note: A mathematician who found his happiness in Go, contributing to open source and being an Evil Martian. Author of AnyCable, and many yet unknown ukulele melodies.
-  spotlight: false
-  socials:
-    - type: twitter
-      url: https://x.com/palkan_tula
 - name: Charles Oliver Nutter
   image: /assets/images/speakers/charles.jpg
   link: https://x.com/headius
