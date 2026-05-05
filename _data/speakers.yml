@@ -158,14 +158,14 @@
   socials:
     - type: twitter
       url: https://x.com/andrzejkrzywda
-- name: Bernard Banta
-  image: /assets/images/speakers/bernard.png
-  link: https://www.linkedin.com/in/banta
-  note: CTO and co-founder of Finplus Group and the Chairman of the African Ruby Community
+- name: Carmine Paolino
+  image: /assets/images/speakers/paolino.jpg
+  link: https://paolino.me/about/
+  note: Creator of RubyLLM and co-founder of Freshflow
   spotlight: false
   socials:
     - type: twitter
-      url: http://twitter.com/Bantab
+      url: https://twitter.com/paolino
 - name: John Gallagher
   image: /assets/images/speakers/john.jpeg
   link: https://www.linkedin.com/in/synapticmishap/
