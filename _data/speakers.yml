@@ -25,7 +25,7 @@
 - name: Obie Fernandez
   image: /assets/images/speakers/obiefernandez.jpg
   link: https://obiefernandez.com/
-  note: Consultant, 30 year veteran of professional software development, serial entrepreneur, and best-selling author. Chief Scientist at @OlympiaAI
+  note: CTO @ ZAR, Rails + AI Pioneer
   spotlight: true
   socials:
     - type: twitter
