@@ -18,7 +18,7 @@
   image: /assets/images/speakers/Jose - web.png
   link: https://x.com/josevalim?lang=en
   note: Creator of the Elixir programming language and Chief Adoption Officer at Dashbit, the company behind Tidewave and Livebook.
-  spotlight: true
+  spotlight: false
   socials:
     - type: twitter
       url: https://x.com/josevalim?lang=en
@@ -58,7 +58,7 @@
   image: /assets/images/speakers/obiefernandez.jpg
   link: https://obiefernandez.com/
   note: Consultant, 30 year veteran of professional software development, serial entrepreneur, and best-selling author. Chief Scientist at @OlympiaAI
-  spotlight: false
+  spotlight: true
   socials:
     - type: twitter
       url: https://x.com/obie
