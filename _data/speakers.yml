@@ -94,14 +94,6 @@
   socials:
     - type: twitter
       url: https://x.com/bbatsov
-- name: Kinsey Durham Grace
-  image: /assets/images/speakers/kinsey.png
-  link: https://x.com/KinseyAnnDurham
-  note: GitHub’s Coding Agent Core team
-  spotlight: false
-  socials:
-    - type: twitter
-      url: https://x.com/KinseyAnnDurham
 - name: Charles Oliver Nutter
   image: /assets/images/speakers/charles.jpg
   link: https://x.com/headius
