@@ -22,6 +22,14 @@
   socials:
     - type: twitter
       url: https://x.com/josevalim?lang=en
+- name: Obie Fernandez
+  image: /assets/images/speakers/obiefernandez.jpg
+  link: https://obiefernandez.com/
+  note: Consultant, 30 year veteran of professional software development, serial entrepreneur, and best-selling author. Chief Scientist at @OlympiaAI
+  spotlight: true
+  socials:
+    - type: twitter
+      url: https://x.com/obie
 - name: Zuzanna Kusznir (MC)
   image: /assets/images/speakers/Zuzanna - web.png
   link: https://x.com/zuzanna_kusznir
@@ -54,14 +62,6 @@
   note: Piano/Klavier
   spotlight: true
   socials: []
-- name: Obie Fernandez
-  image: /assets/images/speakers/obiefernandez.jpg
-  link: https://obiefernandez.com/
-  note: Consultant, 30 year veteran of professional software development, serial entrepreneur, and best-selling author. Chief Scientist at @OlympiaAI
-  spotlight: true
-  socials:
-    - type: twitter
-      url: https://x.com/obie
 - name: Armin Ronacher
   image: /assets/images/speakers/armin-ronacher.jpg
   link: https://ronacher.eu/
