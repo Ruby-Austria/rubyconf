@@ -153,7 +153,7 @@
 - name: Carmine Paolino
   image: /assets/images/speakers/paolino.jpg
   link: https://paolino.me/about/
-  note: Creator of RubyLLM and co-founder of Freshflow
+  note: Creator of RubyLLM and Founder of Chat with Work and Freshflow
   spotlight: false
   socials:
     - type: twitter
