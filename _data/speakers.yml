@@ -134,14 +134,6 @@
   socials:
     - type: linkedin
       url: https://www.linkedin.com/in/ljubomirmarkovic/
-- name: Vlad Dyachenko
-  image: /assets/images/speakers/vlad.jpg
-  link: https://wowinter13.com/
-  note: Staff Engineer / OSS Contributor
-  spotlight: false
-  socials:
-    - type: twitter
-      url: https://x.com/not_wowinter13
 - name: Andrzej Krzywda
   image: /assets/images/speakers/andrzej.png
   link: https://arkency.com/
