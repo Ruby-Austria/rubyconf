@@ -30,6 +30,10 @@
   image: /assets/images/partners/euruko.png
   link: https://2025.euruko.org/
 
+- name: Helvetic Ruby
+  image: /assets/images/partners/helveticruby.png
+  link: https://helvetic-ruby.ch/
+
 - name: RubyCommunityConference
   image: /assets/images/partners/rubycommunityconf.webp
   link: https://www.rubycommunityconference.com/
