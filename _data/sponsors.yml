@@ -22,6 +22,18 @@
   image: /assets/images/sponsors/avo-logo.png
   link: https://avohq.io/rails-admin
   label: Online
+- name: Undercover
+  image: /assets/images/sponsors/undercover.png
+  link: https://undercover-ci.com/
+  label: Gold Online
+- name: Tidewave
+  image: /assets/images/sponsors/sponsor_tidewave.png
+  link: https://tidewave.ai
+  label: Online
+- name: Sultan Drinks
+  image: /assets/images/sponsors/sultandrinks.png
+  link: https://sultan-drinks.com
+  label: Online
 - name: Usput.ba
   image: /assets/images/sponsors/usput.png
   link: https://usput.ba
@@ -30,11 +42,4 @@
   image: /assets/images/sponsors/docta.png
   link: https://doctaphone.com
   label: Online
-- name: Sultan Drinks
-  image: /assets/images/sponsors/sultandrinks.png
-  link: https://sultan-drinks.com
-  label: Online
-- name: Tidewave
-  image: /assets/images/sponsors/sponsor_tidewave.png
-  link: https://tidewave.ai
-  label: Online
+
