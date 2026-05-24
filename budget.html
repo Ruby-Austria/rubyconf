@@ -3,17 +3,19 @@ title: RubyConf Austria 2026 | Budget
 permalink: /budget/
 layout: default
 ---
-{% assign total_income = 0 %}
+{% assign total_income = 0.0 %}
 {% for item in site.data.budget.income %}
   {% assign total_income = total_income | plus: item.amount %}
 {% endfor %}
 
-{% assign total_expenses = 0 %}
+{% assign total_expenses = 0.0 %}
 {% for item in site.data.budget.expenses %}
   {% assign total_expenses = total_expenses | plus: item.amount %}
 {% endfor %}
 
 {% assign difference = total_income | minus: total_expenses %}
+{% assign diff_abs = difference %}
+{% if difference < 0 %}{% assign diff_abs = 0 | minus: difference %}{% endif %}
 {% assign currency = site.data.budget.currency %}
 
 <main class="content">
@@ -34,11 +36,11 @@ layout: default
           <div class="budget-total {% if difference < 0 %}is-negative{% elsif difference > 0 %}is-positive{% endif %}">
             <span class="budget-total__label">Total difference</span>
             <span class="budget-total__amount">
-              {% if difference < 0 %}-{% endif %}{{ currency }}{{ difference | abs }}
+              {% if difference < 0 %}-{% endif %}{{ currency }}{% include format_amount.html amount=diff_abs %}
             </span>
             <div class="budget-total__breakdown">
-              <span><span class="budget-total__dot is-positive"></span> Income {{ currency }}{{ total_income }}</span>
-              <span><span class="budget-total__dot is-negative"></span> Expenses {{ currency }}{{ total_expenses }}</span>
+              <span><span class="budget-total__dot is-positive"></span> Income {{ currency }}{% include format_amount.html amount=total_income %}</span>
+              <span><span class="budget-total__dot is-negative"></span> Expenses {{ currency }}{% include format_amount.html amount=total_expenses %}</span>
             </div>
           </div>
         </div>
@@ -61,13 +63,13 @@ layout: default
                 <tr>
                   <td><span class="text--bold">{{ item.name }}</span></td>
                   <td>{{ item.note }}</td>
-                  <td class="budget-amount is-positive">{{ currency }}{{ item.amount }}</td>
+                  <td class="budget-amount is-positive">{{ currency }}{% include format_amount.html amount=item.amount %}</td>
                 </tr>
                 {% endfor %}
                 <tr class="budget-row-total">
                   <td><span class="text--bold">Total income</span></td>
                   <td></td>
-                  <td class="budget-amount is-positive"><span class="text--bold">{{ currency }}{{ total_income }}</span></td>
+                  <td class="budget-amount is-positive"><span class="text--bold">{{ currency }}{% include format_amount.html amount=total_income %}</span></td>
                 </tr>
               </tbody>
             </table>
@@ -92,13 +94,13 @@ layout: default
                 <tr>
                   <td><span class="text--bold">{{ item.name }}</span></td>
                   <td>{{ item.note }}</td>
-                  <td class="budget-amount is-negative">{{ currency }}{{ item.amount }}</td>
+                  <td class="budget-amount is-negative">{{ currency }}{% include format_amount.html amount=item.amount %}</td>
                 </tr>
                 {% endfor %}
                 <tr class="budget-row-total">
                   <td><span class="text--bold">Total expenses</span></td>
                   <td></td>
-                  <td class="budget-amount is-negative"><span class="text--bold">{{ currency }}{{ total_expenses }}</span></td>
+                  <td class="budget-amount is-negative"><span class="text--bold">{{ currency }}{% include format_amount.html amount=total_expenses %}</span></td>
                 </tr>
               </tbody>
             </table>

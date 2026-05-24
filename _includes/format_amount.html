@@ -1,0 +1,22 @@
+{%- comment -%}
+  Formats a non-negative number as "1,234,567.89".
+  Usage: {% include format_amount.html amount=item.amount %}
+{%- endcomment -%}
+{%- assign _amt = include.amount | default: 0 -%}
+{%- assign _cents = _amt | times: 100 | round -%}
+{%- assign _whole = _cents | divided_by: 100 -%}
+{%- assign _frac = _cents | modulo: 100 -%}
+{%- if _frac < 10 -%}{%- assign _frac_str = '0' | append: _frac -%}{%- else -%}{%- assign _frac_str = _frac | append: '' -%}{%- endif -%}
+{%- assign _whole_str = _whole | append: '' -%}
+{%- assign _size = _whole_str | size -%}
+{%- assign _result = '' -%}
+{%- for i in (1.._size) -%}
+  {%- assign _idx = _size | minus: i -%}
+  {%- assign _char = _whole_str | slice: _idx, 1 -%}
+  {%- assign _result = _char | append: _result -%}
+  {%- assign _mod = i | modulo: 3 -%}
+  {%- if i != _size and _mod == 0 -%}
+    {%- assign _result = ',' | append: _result -%}
+  {%- endif -%}
+{%- endfor -%}
+{{ _result }}.{{ _frac_str }}
