@@ -25,3 +25,5 @@ expenses:
     amount: 12808.32
   - name: Catering (off-site)
     amount: 2760.73
+  - name: Tech support
+    amount: 480
