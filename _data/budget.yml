@@ -29,3 +29,5 @@ expenses:
     amount: 480
   - name: Venue (off-site)
     amount: 3000
+  - name: Logistics
+    amount: 100
