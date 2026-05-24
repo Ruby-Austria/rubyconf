@@ -1,0 +1,88 @@
+# Budget data for the /budget page.
+# Amounts are in EUR. Update freely — the page recalculates totals on build.
+# Set `projected: true` on an item that hasn't materialized yet but is
+# realistic to expect. Projected items are excluded from the confirmed
+# total and shown separately as "where the budget could land".
+currency: "€"
+
+income:
+  - name: Ticket sales
+    amount: 14082.46
+    note: Standard, early-bird and student tickets
+  - name: Sponsorship
+    amount: 1500
+  - name: Sponsorship
+    amount: 750
+  - name: Sponsorship
+    amount: 5000
+  - name: Sponsorship
+    amount: 5000
+  - name: Sponsorship
+    amount: 3000
+  - name: Sponsorship
+    amount: 1000
+    projected: true
+
+expenses:
+  - name: Treasure hunt
+    amount: 3500
+  - name: Services
+    amount: 2069.32
+  - name: Live performance
+    amount: 4400
+  - name: Catering (main)
+    amount: 8734
+  - name: Catering (additional)
+    amount: 3000
+  - name: Venue (main)
+    amount: 12808.32
+  - name: Catering (off-site)
+    amount: 2760.73
+  - name: Tech support
+    amount: 480
+  - name: Venue (off-site)
+    amount: 3000
+  - name: Logistics
+    amount: 100
+  - name: Stamps
+    amount: 80.59
+  - name: Lanyards & accreditations
+    amount: 1000
+  - name: Equipment
+    amount: 124.65
+  - name: Travel & accommodation
+    amount: 367
+  - name: Travel & accommodation
+    amount: 536
+  - name: Travel & accommodation
+    amount: 536
+  - name: Sweets
+    amount: 43.48
+  - name: Sweets
+    amount: 114.64
+  - name: Sweets
+    amount: 214.17
+  - name: Marketing
+    amount: 500
+  - name: Travel & accommodation
+    amount: 685.83
+  - name: Travel & accommodation
+    amount: 367.02
+  - name: Speakers dinner
+    amount: 0
+    note: Covered by sponsor
+  - name: Soft drinks (190 cans)
+    amount: 24
+    note: Mostly covered by sponsor
+  - name: Equipment for embassy
+    amount: 0
+    note: Provided by sponsor
+  - name: Travel & accommodation
+    amount: 0
+    note: Covered by sponsor
+  - name: Travel & accommodation
+    amount: 0
+    note: Covered by sponsor
+  - name: Travel & accommodation
+    amount: 0
+    note: Covered by sponsor

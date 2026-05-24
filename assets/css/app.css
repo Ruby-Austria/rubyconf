@@ -4222,3 +4222,287 @@
     align-items: flex-start;
   }
 }
+
+/* ==========================================================================
+   Budget Page
+   ========================================================================== */
+
+.budget-total {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 48px 40px;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-2xl);
+  background-color: var(--overlay-light);
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  box-shadow: var(--shadow-sm);
+}
+
+.budget-total__label {
+  font-family: "Source Code Pro", monospace;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  opacity: 0.8;
+  margin-bottom: 12px;
+}
+
+.budget-total__amount {
+  font-size: clamp(56px, 8vw, 96px);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  color: var(--text-color-default);
+}
+
+.budget-total.is-positive .budget-total__amount {
+  color: var(--card-label-helper);
+}
+
+.budget-total.is-negative .budget-total__amount {
+  color: var(--primary-color);
+  text-shadow: var(--shadow-glow);
+}
+
+.budget-total__breakdown {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 20px;
+  font-family: "Source Code Pro", monospace;
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+.budget-total__breakdown span {
+  display: inline-flex;
+  align-items: center;
+}
+
+.budget-total__dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: var(--radius-pill);
+  margin-right: 8px;
+}
+
+.budget-total__dot.is-positive {
+  background-color: var(--card-label-helper);
+}
+
+.budget-total__dot.is-negative {
+  background-color: var(--primary-color);
+}
+
+.table.table--budget thead tr th:nth-child(1) {
+  text-align: left;
+  width: 30%;
+}
+
+.table.table--budget thead tr th:nth-child(2) {
+  text-align: left;
+}
+
+.table.table--budget thead tr th:nth-child(3) {
+  text-align: right;
+  width: 20%;
+}
+
+.table.table--budget tbody tr td:nth-child(2) {
+  text-align: left;
+  font-weight: 300;
+  opacity: 0.8;
+}
+
+.table.table--budget tbody tr td:nth-child(3) {
+  text-align: right;
+  font-family: "Source Code Pro", monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+.budget-amount.is-positive {
+  color: var(--card-label-helper);
+}
+
+.budget-amount.is-negative {
+  color: var(--primary-color);
+}
+
+.budget-row-total td {
+  border-top: 1px solid var(--text-color-default);
+  border-bottom: none !important;
+  font-size: 18px !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .budget-total {
+    padding: 32px 20px;
+  }
+
+  .budget-total__breakdown {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+/* Budget — projected items */
+.budget-total__projection {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px dashed var(--border-light);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  font-family: "Source Code Pro", monospace;
+}
+
+.budget-total__projection__label {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  opacity: 0.7;
+  margin-bottom: 6px;
+}
+
+.budget-total__projection__amount {
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+  color: var(--text-color-default);
+  opacity: 0.85;
+}
+
+.budget-total__projection.is-positive .budget-total__projection__amount {
+  color: var(--card-label-helper);
+  opacity: 1;
+}
+
+.budget-total__projection.is-negative .budget-total__projection__amount {
+  color: var(--primary-color);
+  opacity: 1;
+}
+
+.table.table--budget tbody tr.is-projected td {
+  opacity: 0.65;
+}
+
+.table.table--budget tbody tr.is-projected:hover td {
+  opacity: 1;
+}
+
+.budget-badge {
+  display: inline-block;
+  margin-left: 10px;
+  padding: 2px 10px;
+  font-family: "Source Code Pro", monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 1px dashed var(--border-light);
+  border-radius: var(--radius-pill);
+  vertical-align: middle;
+  font-weight: 400;
+  color: var(--text-color-default);
+}
+
+.budget-row-projected-total td {
+  border-bottom: 1px solid var(--border-light) !important;
+  font-size: 14px !important;
+  font-family: "Source Code Pro", monospace;
+  opacity: 0.8;
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+}
+
+/* Budget — mobile */
+@media only screen and (max-width: 768px) {
+  .budget-total {
+    padding: 28px 18px;
+    border-radius: var(--radius-xl);
+  }
+  .budget-total__label {
+    font-size: 13px;
+    letter-spacing: 1.5px;
+  }
+  .budget-total__projection__label {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+  }
+  .budget-total__projection__amount {
+    font-size: 22px;
+  }
+  .budget-total__breakdown {
+    flex-direction: column;
+    gap: 6px;
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  /* Stack each table row as a card: name + amount on top, note below. */
+  .table.table--budget,
+  .table.table--budget thead,
+  .table.table--budget tbody,
+  .table.table--budget tr {
+    display: block;
+    width: 100%;
+  }
+  .table.table--budget thead {
+    display: none;
+  }
+  .table.table--budget tbody tr {
+    position: relative;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border-light);
+  }
+  .table.table--budget tbody tr td {
+    display: block;
+    border: none !important;
+    padding: 0 !important;
+    text-align: left;
+    font-size: 15px;
+  }
+  .table.table--budget tbody tr td:nth-child(1) {
+    padding-right: 110px !important;
+    font-weight: 400;
+  }
+  .table.table--budget tbody tr td:nth-child(2) {
+    font-size: 13px;
+    opacity: 0.6;
+    margin-top: 4px;
+    padding-right: 110px !important;
+  }
+  .table.table--budget tbody tr td:nth-child(2):empty {
+    display: none;
+  }
+  .table.table--budget tbody tr td:nth-child(3) {
+    position: absolute;
+    top: 12px;
+    right: 0;
+    text-align: right !important;
+    font-size: 15px;
+  }
+  .table.table--budget tbody tr.budget-row-total {
+    padding: 14px 0;
+  }
+  .table.table--budget tbody tr.budget-row-total td:nth-child(3) {
+    top: 14px;
+    font-size: 16px !important;
+  }
+  .table.table--budget tbody tr.budget-row-projected-total td:nth-child(3) {
+    font-size: 13px !important;
+  }
+  .budget-badge {
+    font-size: 10px;
+    padding: 1px 8px;
+    margin-left: 6px;
+  }
+}

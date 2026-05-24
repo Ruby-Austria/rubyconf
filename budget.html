@@ -1,0 +1,170 @@
+---
+title: RubyConf Austria 2026 | Budget
+permalink: /budget/
+layout: default
+---
+{% assign confirmed_income = 0.0 %}
+{% assign projected_income = 0.0 %}
+{% for item in site.data.budget.income %}
+  {% if item.projected %}
+    {% assign projected_income = projected_income | plus: item.amount %}
+  {% else %}
+    {% assign confirmed_income = confirmed_income | plus: item.amount %}
+  {% endif %}
+{% endfor %}
+
+{% assign confirmed_expenses = 0.0 %}
+{% assign projected_expenses = 0.0 %}
+{% for item in site.data.budget.expenses %}
+  {% if item.projected %}
+    {% assign projected_expenses = projected_expenses | plus: item.amount %}
+  {% else %}
+    {% assign confirmed_expenses = confirmed_expenses | plus: item.amount %}
+  {% endif %}
+{% endfor %}
+
+{% assign difference = confirmed_income | minus: confirmed_expenses %}
+{% assign diff_abs = difference %}
+{% if difference < 0 %}{% assign diff_abs = 0 | minus: difference %}{% endif %}
+
+{% assign projected_income_total = confirmed_income | plus: projected_income %}
+{% assign projected_expenses_total = confirmed_expenses | plus: projected_expenses %}
+{% assign projected_difference = projected_income_total | minus: projected_expenses_total %}
+{% assign proj_abs = projected_difference %}
+{% if projected_difference < 0 %}{% assign proj_abs = 0 | minus: projected_difference %}{% endif %}
+{% assign has_projected = false %}
+{% if projected_income > 0 or projected_expenses > 0 %}{% assign has_projected = true %}{% endif %}
+
+{% assign currency = site.data.budget.currency %}
+
+<main class="content">
+  <header class="header">
+    <div class="header__content">
+      <h1 class="header__title mb--1">
+        Budget
+      </h1>
+      <p class="header__text mb--3">
+        Transparency on how we fund and spend on RubyConf Austria.
+      </p>
+    </div>
+  </header>
+  <section class="section section--basic">
+    <div class="section__content">
+      <article class="section__article is-centered mb--8">
+        <div class="col--100">
+          <div class="budget-total {% if difference < 0 %}is-negative{% elsif difference > 0 %}is-positive{% endif %}">
+            <span class="budget-total__label">Confirmed difference</span>
+            <span class="budget-total__amount">
+              {% if difference < 0 %}-{% endif %}{{ currency }}{% include format_amount.html amount=diff_abs %}
+            </span>
+            <div class="budget-total__breakdown">
+              <span><span class="budget-total__dot is-positive"></span> Income {{ currency }}{% include format_amount.html amount=confirmed_income %}</span>
+              <span><span class="budget-total__dot is-negative"></span> Expenses {{ currency }}{% include format_amount.html amount=confirmed_expenses %}</span>
+            </div>
+            {% if has_projected %}
+            <div class="budget-total__projection {% if projected_difference < 0 %}is-negative{% elsif projected_difference > 0 %}is-positive{% endif %}">
+              <span class="budget-total__projection__label">If all projected lands</span>
+              <span class="budget-total__projection__amount">
+                {% if projected_difference < 0 %}-{% endif %}{{ currency }}{% include format_amount.html amount=proj_abs %}
+              </span>
+            </div>
+            {% endif %}
+          </div>
+        </div>
+      </article>
+
+      <article class="section__article mb--8">
+        <div class="col--100">
+          <h3 class="section__article__title">Income</h3>
+          <div class="table-scroll">
+            <table class="table table--budget">
+              <thead>
+                <tr>
+                  <th>Item</th>
+                  <th>Notes</th>
+                  <th>Amount</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for item in site.data.budget.income %}
+                <tr{% if item.projected %} class="is-projected"{% endif %}>
+                  <td>
+                    <span class="text--bold">{{ item.name }}</span>
+                    {% if item.projected %}<span class="budget-badge">Projected</span>{% endif %}
+                  </td>
+                  <td>{{ item.note }}</td>
+                  <td class="budget-amount is-positive">{{ currency }}{% include format_amount.html amount=item.amount %}</td>
+                </tr>
+                {% endfor %}
+                <tr class="budget-row-total">
+                  <td><span class="text--bold">Confirmed income</span></td>
+                  <td></td>
+                  <td class="budget-amount is-positive"><span class="text--bold">{{ currency }}{% include format_amount.html amount=confirmed_income %}</span></td>
+                </tr>
+                {% if projected_income > 0 %}
+                <tr class="budget-row-projected-total">
+                  <td>+ projected</td>
+                  <td></td>
+                  <td class="budget-amount is-positive">{{ currency }}{% include format_amount.html amount=projected_income %}</td>
+                </tr>
+                {% endif %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </article>
+
+      <article class="section__article mb--8">
+        <div class="col--100">
+          <h3 class="section__article__title">Expenses</h3>
+          <div class="table-scroll">
+            <table class="table table--budget">
+              <thead>
+                <tr>
+                  <th>Item</th>
+                  <th>Notes</th>
+                  <th>Amount</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for item in site.data.budget.expenses %}
+                <tr{% if item.projected %} class="is-projected"{% endif %}>
+                  <td>
+                    <span class="text--bold">{{ item.name }}</span>
+                    {% if item.projected %}<span class="budget-badge">Projected</span>{% endif %}
+                  </td>
+                  <td>{{ item.note }}</td>
+                  <td class="budget-amount is-negative">{{ currency }}{% include format_amount.html amount=item.amount %}</td>
+                </tr>
+                {% endfor %}
+                <tr class="budget-row-total">
+                  <td><span class="text--bold">Confirmed expenses</span></td>
+                  <td></td>
+                  <td class="budget-amount is-negative"><span class="text--bold">{{ currency }}{% include format_amount.html amount=confirmed_expenses %}</span></td>
+                </tr>
+                {% if projected_expenses > 0 %}
+                <tr class="budget-row-projected-total">
+                  <td>+ projected</td>
+                  <td></td>
+                  <td class="budget-amount is-negative">{{ currency }}{% include format_amount.html amount=projected_expenses %}</td>
+                </tr>
+                {% endif %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </article>
+
+      <article class="section__article is-centered">
+        <div class="col--100 text--align-center">
+          <a href="/sponsoring" class="button button--primary">
+            Become a Sponsor
+          </a>
+          <a href="https://ti.to/rubyconfat/2026" target="_blank" class="button button--primary">
+            Buy a ticket
+          </a>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
