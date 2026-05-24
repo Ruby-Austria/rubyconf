@@ -21,9 +21,11 @@ expenses:
     amount: 8734
   - name: Catering (additional)
     amount: 3000
-  - name: Venue
+  - name: Venue (main)
     amount: 12808.32
   - name: Catering (off-site)
     amount: 2760.73
   - name: Tech support
     amount: 480
+  - name: Venue (off-site)
+    amount: 3000
