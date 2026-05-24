@@ -53,3 +53,5 @@ expenses:
     amount: 500
   - name: Travel & accommodation
     amount: 685.83
+  - name: Travel & accommodation
+    amount: 367.02
