@@ -43,3 +43,5 @@ expenses:
     amount: 536
   - name: Travel & accommodation
     amount: 536
+  - name: Sweets
+    amount: 43.48
