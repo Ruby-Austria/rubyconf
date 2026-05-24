@@ -11,6 +11,8 @@ income:
     note: Standard, early-bird and student tickets
   - name: Sponsorship
     amount: 1500
+  - name: Sponsorship
+    amount: 750
 
 expenses:
   - name: Treasure hunt
