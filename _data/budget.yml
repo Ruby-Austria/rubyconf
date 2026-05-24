@@ -31,3 +31,5 @@ expenses:
     amount: 3000
   - name: Logistics
     amount: 100
+  - name: Stamps
+    amount: 80.59
