@@ -15,3 +15,5 @@ expenses:
     amount: 3500
   - name: Services
     amount: 2069.32
+  - name: Services
+    amount: 4400
