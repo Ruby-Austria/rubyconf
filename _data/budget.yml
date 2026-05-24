@@ -74,3 +74,6 @@ expenses:
   - name: Soft drinks (190 cans)
     amount: 24
     note: Mostly covered by sponsor
+  - name: Equipment for embassy
+    amount: 0
+    note: Provided by sponsor
