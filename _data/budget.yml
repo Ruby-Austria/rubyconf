@@ -13,3 +13,5 @@ income:
 expenses:
   - name: Treasure hunt
     amount: 3500
+  - name: Services
+    amount: 2069.32
