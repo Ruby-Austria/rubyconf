@@ -28,7 +28,7 @@ expenses:
     amount: 3500
   - name: Services
     amount: 2069.32
-  - name: Live performance
+  - name: Services
     amount: 4400
   - name: Catering (main)
     amount: 8734
@@ -112,6 +112,12 @@ expenses:
     projected: true
   - name: Travel & accommodation
     amount: 500
+    projected: true
+  - name: Services
+    amount: 500
+    projected: true
+  - name: Logistics
+    amount: 200
     projected: true
   - name: Travel & accommodation
     amount: 500
