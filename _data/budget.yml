@@ -33,3 +33,5 @@ expenses:
     amount: 100
   - name: Stamps
     amount: 80.59
+  - name: Lanyards & accreditations
+    amount: 1000
