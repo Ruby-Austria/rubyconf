@@ -4222,3 +4222,132 @@
     align-items: flex-start;
   }
 }
+
+/* ==========================================================================
+   Budget Page
+   ========================================================================== */
+
+.budget-total {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 48px 40px;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-2xl);
+  background-color: var(--overlay-light);
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  box-shadow: var(--shadow-sm);
+}
+
+.budget-total__label {
+  font-family: "Source Code Pro", monospace;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  opacity: 0.8;
+  margin-bottom: 12px;
+}
+
+.budget-total__amount {
+  font-size: clamp(56px, 8vw, 96px);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  color: var(--text-color-default);
+}
+
+.budget-total.is-positive .budget-total__amount {
+  color: var(--card-label-helper);
+}
+
+.budget-total.is-negative .budget-total__amount {
+  color: var(--primary-color);
+  text-shadow: var(--shadow-glow);
+}
+
+.budget-total__breakdown {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 20px;
+  font-family: "Source Code Pro", monospace;
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+.budget-total__breakdown span {
+  display: inline-flex;
+  align-items: center;
+}
+
+.budget-total__dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: var(--radius-pill);
+  margin-right: 8px;
+}
+
+.budget-total__dot.is-positive {
+  background-color: var(--card-label-helper);
+}
+
+.budget-total__dot.is-negative {
+  background-color: var(--primary-color);
+}
+
+.table.table--budget thead tr th:nth-child(1) {
+  text-align: left;
+  width: 30%;
+}
+
+.table.table--budget thead tr th:nth-child(2) {
+  text-align: left;
+}
+
+.table.table--budget thead tr th:nth-child(3) {
+  text-align: right;
+  width: 20%;
+}
+
+.table.table--budget tbody tr td:nth-child(2) {
+  text-align: left;
+  font-weight: 300;
+  opacity: 0.8;
+}
+
+.table.table--budget tbody tr td:nth-child(3) {
+  text-align: right;
+  font-family: "Source Code Pro", monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+.budget-amount.is-positive {
+  color: var(--card-label-helper);
+}
+
+.budget-amount.is-negative {
+  color: var(--primary-color);
+}
+
+.budget-row-total td {
+  border-top: 1px solid var(--text-color-default);
+  border-bottom: none !important;
+  font-size: 18px !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .budget-total {
+    padding: 32px 20px;
+  }
+
+  .budget-total__breakdown {
+    flex-direction: column;
+    gap: 8px;
+  }
+}

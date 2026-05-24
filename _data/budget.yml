@@ -1,0 +1,46 @@
+# Budget data for the /budget page.
+# Amounts are in EUR. Update freely — the page recalculates totals on build.
+currency: "€"
+
+income:
+  - name: Ticket sales
+    amount: 0
+    note: Standard, early-bird and student tickets
+  - name: Ruby sponsor
+    amount: 0
+    note: Up to 2 packages
+  - name: Pickaxe sponsor
+    amount: 0
+    note: Title sponsor (free tickets for attendees)
+  - name: Booth sponsors
+    amount: 0
+    note: Up to 4 booths
+  - name: Online sponsors
+    amount: 0
+    note: Silver & Gold online packages
+  - name: Workshop revenue
+    amount: 0
+
+expenses:
+  - name: Venue rental
+    amount: 0
+  - name: Catering & coffee breaks
+    amount: 0
+  - name: AV equipment & recording
+    amount: 0
+  - name: Speaker travel
+    amount: 0
+  - name: Speaker accommodation
+    amount: 0
+  - name: Print materials (lanyards, signage)
+    amount: 0
+  - name: Photography & videography
+    amount: 0
+  - name: Music & artistic performances
+    amount: 0
+  - name: Social events
+    amount: 0
+  - name: Website & domains
+    amount: 0
+  - name: Insurance & administration
+    amount: 0

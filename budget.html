@@ -1,0 +1,121 @@
+---
+title: RubyConf Austria 2026 | Budget
+permalink: /budget/
+layout: default
+---
+{% assign total_income = 0 %}
+{% for item in site.data.budget.income %}
+  {% assign total_income = total_income | plus: item.amount %}
+{% endfor %}
+
+{% assign total_expenses = 0 %}
+{% for item in site.data.budget.expenses %}
+  {% assign total_expenses = total_expenses | plus: item.amount %}
+{% endfor %}
+
+{% assign difference = total_income | minus: total_expenses %}
+{% assign currency = site.data.budget.currency %}
+
+<main class="content">
+  <header class="header">
+    <div class="header__content">
+      <h1 class="header__title mb--1">
+        Budget
+      </h1>
+      <p class="header__text mb--3">
+        Transparency on how we fund and spend on RubyConf Austria.
+      </p>
+    </div>
+  </header>
+  <section class="section section--basic">
+    <div class="section__content">
+      <article class="section__article is-centered mb--8">
+        <div class="col--100">
+          <div class="budget-total {% if difference < 0 %}is-negative{% elsif difference > 0 %}is-positive{% endif %}">
+            <span class="budget-total__label">Total difference</span>
+            <span class="budget-total__amount">
+              {% if difference < 0 %}-{% endif %}{{ currency }}{{ difference | abs }}
+            </span>
+            <div class="budget-total__breakdown">
+              <span><span class="budget-total__dot is-positive"></span> Income {{ currency }}{{ total_income }}</span>
+              <span><span class="budget-total__dot is-negative"></span> Expenses {{ currency }}{{ total_expenses }}</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="section__article mb--8">
+        <div class="col--100">
+          <h3 class="section__article__title">Income</h3>
+          <div class="table-scroll">
+            <table class="table table--budget">
+              <thead>
+                <tr>
+                  <th>Item</th>
+                  <th>Notes</th>
+                  <th>Amount</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for item in site.data.budget.income %}
+                <tr>
+                  <td><span class="text--bold">{{ item.name }}</span></td>
+                  <td>{{ item.note }}</td>
+                  <td class="budget-amount is-positive">{{ currency }}{{ item.amount }}</td>
+                </tr>
+                {% endfor %}
+                <tr class="budget-row-total">
+                  <td><span class="text--bold">Total income</span></td>
+                  <td></td>
+                  <td class="budget-amount is-positive"><span class="text--bold">{{ currency }}{{ total_income }}</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </article>
+
+      <article class="section__article mb--8">
+        <div class="col--100">
+          <h3 class="section__article__title">Expenses</h3>
+          <div class="table-scroll">
+            <table class="table table--budget">
+              <thead>
+                <tr>
+                  <th>Item</th>
+                  <th>Notes</th>
+                  <th>Amount</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for item in site.data.budget.expenses %}
+                <tr>
+                  <td><span class="text--bold">{{ item.name }}</span></td>
+                  <td>{{ item.note }}</td>
+                  <td class="budget-amount is-negative">{{ currency }}{{ item.amount }}</td>
+                </tr>
+                {% endfor %}
+                <tr class="budget-row-total">
+                  <td><span class="text--bold">Total expenses</span></td>
+                  <td></td>
+                  <td class="budget-amount is-negative"><span class="text--bold">{{ currency }}{{ total_expenses }}</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </article>
+
+      <article class="section__article is-centered">
+        <div class="col--100 text--align-center">
+          <a href="/sponsoring" class="button button--primary">
+            Become a Sponsor
+          </a>
+          <a href="https://ti.to/rubyconfat/2026" target="_blank" class="button button--primary">
+            Buy a ticket
+          </a>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
