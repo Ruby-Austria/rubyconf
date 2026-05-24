@@ -23,3 +23,5 @@ expenses:
     amount: 3000
   - name: Venue
     amount: 12808.32
+  - name: Catering (off-site)
+    amount: 2760.73
