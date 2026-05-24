@@ -51,3 +51,5 @@ expenses:
     amount: 214.17
   - name: Marketing
     amount: 500
+  - name: Travel & accommodation
+    amount: 685.83
