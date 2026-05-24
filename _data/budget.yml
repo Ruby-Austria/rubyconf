@@ -49,3 +49,5 @@ expenses:
     amount: 114.64
   - name: Sweets
     amount: 214.17
+  - name: Marketing
+    amount: 500
