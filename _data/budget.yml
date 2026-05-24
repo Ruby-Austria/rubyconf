@@ -86,3 +86,39 @@ expenses:
   - name: Travel & accommodation
     amount: 0
     note: Covered by sponsor
+  - name: Travel & accommodation
+    amount: 500
+    projected: true
+  - name: Travel & accommodation
+    amount: 1000
+    projected: true
+  - name: Travel & accommodation
+    amount: 1000
+    projected: true
+  - name: Travel & accommodation
+    amount: 1000
+    projected: true
+  - name: Travel & accommodation
+    amount: 500
+    projected: true
+  - name: Travel & accommodation
+    amount: 500
+    projected: true
+  - name: Travel & accommodation
+    amount: 500
+    projected: true
+  - name: Travel & accommodation
+    amount: 500
+    projected: true
+  - name: Travel & accommodation
+    amount: 500
+    projected: true
+  - name: Travel & accommodation
+    amount: 500
+    projected: true
+  - name: Travel & accommodation
+    amount: 500
+    projected: true
+  - name: Travel & accommodation
+    amount: 500
+    projected: true
