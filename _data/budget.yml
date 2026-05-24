@@ -8,7 +8,6 @@ currency: "€"
 income:
   - name: Ticket sales
     amount: 14082.46
-    note: Standard, early-bird and student tickets
   - name: Sponsorship
     amount: 1500
   - name: Sponsorship
