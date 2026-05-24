@@ -19,3 +19,5 @@ expenses:
     amount: 4400
   - name: Catering Das MuTh
     amount: 8734
+  - name: Das MuTh food
+    amount: 3000
