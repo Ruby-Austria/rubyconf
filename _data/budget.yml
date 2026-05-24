@@ -116,6 +116,9 @@ expenses:
   - name: Services
     amount: 500
     projected: true
+  - name: Logistics
+    amount: 200
+    projected: true
   - name: Travel & accommodation
     amount: 500
     projected: true
