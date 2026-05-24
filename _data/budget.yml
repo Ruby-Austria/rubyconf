@@ -1,5 +1,8 @@
 # Budget data for the /budget page.
 # Amounts are in EUR. Update freely — the page recalculates totals on build.
+# Set `projected: true` on an item that hasn't materialized yet but is
+# realistic to expect. Projected items are excluded from the confirmed
+# total and shown separately as "where the budget could land".
 currency: "€"
 
 income:
