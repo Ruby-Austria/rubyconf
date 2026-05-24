@@ -89,3 +89,6 @@ expenses:
   - name: Travel & accommodation
     amount: 500
     projected: true
+  - name: Travel & accommodation
+    amount: 1000
+    projected: true
