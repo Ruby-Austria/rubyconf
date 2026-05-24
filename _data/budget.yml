@@ -4,7 +4,7 @@ currency: "€"
 
 income:
   - name: Ticket sales
-    amount: 0
+    amount: 14082.46
     note: Standard, early-bird and student tickets
   - name: Ruby sponsor
     amount: 0
