@@ -22,6 +22,8 @@ income:
     amount: 0
 
 expenses:
+  - name: Treasure hunt
+    amount: 3000
   - name: Venue rental
     amount: 0
   - name: Catering & coffee breaks
