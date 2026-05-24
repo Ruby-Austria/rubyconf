@@ -17,6 +17,8 @@ income:
     amount: 5000
   - name: Sponsorship
     amount: 5000
+  - name: Sponsorship
+    amount: 3000
 
 expenses:
   - name: Treasure hunt
