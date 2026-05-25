@@ -72,6 +72,8 @@ expenses:
   - name: Speakers dinner
     amount: 0
     note: Covered by sponsor
+  - name: Speakers dinner upgrade
+    amount: 250
   - name: Soft drinks (190 cans)
     amount: 24
     note: Mostly covered by sponsor
