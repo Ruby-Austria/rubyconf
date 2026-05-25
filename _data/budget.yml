@@ -67,6 +67,8 @@ expenses:
     amount: 685.83
   - name: Travel & accommodation
     amount: 367.02
+  - name: Travel & accommodation
+    amount: 102
   - name: Speakers dinner
     amount: 0
     note: Covered by sponsor
