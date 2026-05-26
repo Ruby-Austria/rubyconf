@@ -105,7 +105,7 @@
 - name: Dalma Boros
   image: /assets/images/speakers/dalma.jpg
   link: https://www.dalmaboros.com/
-  note: Ruby engineer
+  note: Artisanal Ruby Engineer, CFO and Book Club Leader @ WNB.rb
   spotlight: false
   socials:
     - type: twitter
@@ -113,7 +113,7 @@
 - name: Jess Sullivan
   image: /assets/images/speakers/jess.jpg
   link: https://www.linkedin.com/in/jess-sullivan-1ab72ba1/
-  note: Ruby engineer
+  note: Senior Software Engineer @ Scan.com, COO and Book Club Leader @ WNB.rb
   spotlight: false
   socials:
     - type: linkedin
