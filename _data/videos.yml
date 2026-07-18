@@ -90,7 +90,7 @@
   time: "13:00 - 13:30"
   title: Frontend Ruby on Rails with Glimmer DSL for Web
   speaker: Andy Maleh
-  youtube:
+  youtube: https://youtu.be/qTukq5AcSK0
   file:
 
 - slot: day2-workshop-observability
