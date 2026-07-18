@@ -38,9 +38,9 @@
 - slot: day1-piano-nadir
   day: 1
   time: "19:40 - 20:00"
-  title: Piano
+  title: "Piano: Live at Haus der Musik"
   speaker: Nadir Hošić
-  youtube:
+  youtube: https://youtu.be/Akq6QV0W_Wk
   file:
 
 - slot: day1-panel-discussion
