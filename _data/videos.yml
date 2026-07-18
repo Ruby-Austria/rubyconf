@@ -168,9 +168,9 @@
 - slot: day2-closing-keynote
   day: 2
   time: "17:50 - 18:50"
-  title: Closing Keynote
+  title: "Closing Keynote: Start Writing Ruby"
   speaker: Dave Thomas
-  youtube:
+  youtube: https://youtu.be/hC943MiL0lg
   file:
 
 - slot: day2-closing-ceremony
