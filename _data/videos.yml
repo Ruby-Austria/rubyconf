@@ -106,7 +106,7 @@
   time: "13:35 - 14:05"
   title: "The Humble Event Bus: Building Safe Concurrency in Ruby"
   speaker: Ljubomir Marković
-  youtube:
+  youtube: https://youtu.be/bFGcJ5kOrOc
   file:
 
 - slot: day2-rubocop-2
