@@ -80,9 +80,9 @@
 - slot: day2-keynote-obie
   day: 2
   time: "11:10 - 12:00"
-  title: Keynote
+  title: "Keynote: A Tale of Two Chefs"
   speaker: Obie Fernandez
-  youtube:
+  youtube: https://youtu.be/7QrXGLSZHvE
   file:
 
 - slot: day2-glimmer-dsl
