@@ -46,7 +46,7 @@
 - slot: day1-panel-discussion
   day: 1
   time: "20:10"
-  title: Panel Discussion
+  title: "Panel: AI, Agents & the Future of Ruby"
   speaker: Chad Fowler, José Valim, Obie Fernandez, Armin Ronacher · Moderated by Hans Schnedlitz
   youtube: https://youtu.be/ZsWRcX6hHO0
   file:
@@ -72,7 +72,7 @@
 - slot: day2-opening-keynote
   day: 2
   time: "10:10 - 11:00"
-  title: Opening Keynote
+  title: "Opening Keynote: This Is What We've Been Training For"
   speaker: Chad Fowler
   youtube: https://youtu.be/6yu5QmeF_NE
   file:
