@@ -74,7 +74,7 @@
   time: "10:10 - 11:00"
   title: Opening Keynote
   speaker: Chad Fowler
-  youtube:
+  youtube: https://youtu.be/6yu5QmeF_NE
   file:
 
 - slot: day2-keynote-obie

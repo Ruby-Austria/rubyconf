@@ -36,8 +36,9 @@ layout: default
           <article class="video-card" id="{{ video.slot }}">
             <div class="video-card__media">
               {% if video.youtube %}
-              <button type="button" class="video-card__poster" data-youtube="{{ video.youtube }}" aria-label="Play {{ video.title }}">
-                <img src="https://i.ytimg.com/vi/{{ video.youtube }}/hqdefault.jpg" alt="" loading="lazy" />
+              {% assign yt_id = video.youtube | strip | split: "/" | last | split: "v=" | last | split: "?" | first | split: "&" | first %}
+              <button type="button" class="video-card__poster" data-youtube="{{ yt_id }}" aria-label="Play {{ video.title }}">
+                <img src="https://i.ytimg.com/vi/{{ yt_id }}/hqdefault.jpg" alt="" loading="lazy" />
                 <span class="video-card__play" aria-hidden="true">
                   <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                     <path d="M8 5.14V19.14L19 12.14L8 5.14Z"/>
