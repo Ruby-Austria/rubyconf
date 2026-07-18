@@ -1,0 +1,190 @@
+# Session recordings for RubyConf Austria 2026.
+#
+# To publish a video, fill in ONE of:
+#   youtube: the YouTube video ID (the part after v= in the URL, e.g. dQw4w9WgXcQ)
+#   file:    a path to a video file you placed in /assets/videos/ (e.g. /assets/videos/keynote.mp4)
+#            (keep self-hosted files small — GitHub blocks files over 100 MB)
+#
+# Entries with neither stay hidden on /videos/ and get no "Watch recording"
+# link in the agenda. The `slot` slug ties the video to its agenda slot and
+# is used as the anchor on /videos/ — don't change existing slugs.
+
+# --- Day 1 — Friday, 29th May (Haus der Musik) ---
+
+- slot: day1-welcome-opening
+  day: 1
+  time: "18:00 - 18:10"
+  title: Welcome & Opening
+  speaker: Hans Schnedlitz
+  youtube:
+  file:
+
+- slot: day1-herb-reactionview
+  day: 1
+  time: "18:10 - 18:40"
+  title: "Herb & ReActionView: Mid-2026 Progress Update"
+  speaker: Marco Roth
+  youtube:
+  file:
+
+- slot: day1-introducing-raindeer
+  day: 1
+  time: "18:50 - 19:20"
+  title: Introducing Raindeer
+  speaker: Maedi Prichard
+  youtube:
+  file:
+
+- slot: day1-piano-nadir
+  day: 1
+  time: "19:40 - 20:00"
+  title: Piano
+  speaker: Nadir Hošić
+  youtube:
+  file:
+
+- slot: day1-panel-discussion
+  day: 1
+  time: "20:10"
+  title: Panel Discussion
+  speaker: Chad Fowler, José Valim, Obie Fernandez, Armin Ronacher
+  youtube:
+  file:
+
+# --- Day 2 — Saturday, 30th May (Das MuTh) ---
+
+- slot: day2-good-morning
+  day: 2
+  time: "09:30 - 09:40"
+  title: Good Morning and Agenda
+  speaker: Zuzanna Kusznir
+  youtube:
+  file:
+
+- slot: day2-concert-chorus-juventus
+  day: 2
+  time: "09:40 - 10:10"
+  title: Concert
+  speaker: Chorus Juventus - Wiener Sängerknaben
+  youtube:
+  file:
+
+- slot: day2-opening-keynote
+  day: 2
+  time: "10:10 - 11:00"
+  title: Opening Keynote
+  speaker: Chad Fowler
+  youtube:
+  file:
+
+- slot: day2-keynote-obie
+  day: 2
+  time: "11:10 - 12:00"
+  title: Keynote
+  speaker: Obie Fernandez
+  youtube:
+  file:
+
+- slot: day2-glimmer-dsl
+  day: 2
+  time: "13:00 - 13:30"
+  title: Frontend Ruby on Rails with Glimmer DSL for Web
+  speaker: Andy Maleh
+  youtube:
+  file:
+
+- slot: day2-workshop-observability
+  day: 2
+  time: "13:00 - 14:40"
+  title: "Workshop: Understand Your Rails App, Practical Observability for Engineers"
+  speaker: John Gallagher
+  youtube:
+  file:
+
+- slot: day2-event-bus
+  day: 2
+  time: "13:35 - 14:05"
+  title: "The Humble Event Bus: Building Safe Concurrency in Ruby"
+  speaker: Ljubomir Marković
+  youtube:
+  file:
+
+- slot: day2-rubocop-2
+  day: 2
+  time: "14:10 - 14:40"
+  title: "RuboCop 2.0: Where do we go now?"
+  speaker: Bozhidar Batsov
+  youtube:
+  file:
+
+- slot: day2-piano-iman
+  day: 2
+  time: "15:00 - 15:20"
+  title: Piano
+  speaker: Iman Jahić Hošić
+  youtube:
+  file:
+
+- slot: day2-lightning-talks
+  day: 2
+  time: "15:20 - 15:40"
+  title: Lightning Talks
+  speaker: Community speakers
+  youtube:
+  file:
+
+- slot: day2-rails-ddd
+  day: 2
+  time: "15:50 - 16:20"
+  title: 15 years of Rails with Domain Driven Design - lessons learnt
+  speaker: Andrzej Krzywda
+  youtube:
+  file:
+
+- slot: day2-workshop-jruby
+  day: 2
+  time: "15:50 - 17:30"
+  title: "Workshop: Do More With JRuby"
+  speaker: Charles Oliver Nutter
+  youtube:
+  file:
+
+- slot: day2-ruby-ai-web-apps
+  day: 2
+  time: "16:25 - 16:55"
+  title: Ruby Is the Best Language for Building AI Web Apps
+  speaker: Carmine Paolino
+  youtube:
+  file:
+
+- slot: day2-surfing-with-strangers
+  day: 2
+  time: "17:00 - 17:30"
+  title: "Why You Should Go Surfing with Strangers: Creating Connection in the Ruby Community"
+  speaker: Dalma & Jess
+  youtube:
+  file:
+
+- slot: day2-closing-keynote
+  day: 2
+  time: "17:50 - 18:50"
+  title: Closing Keynote
+  speaker: Dave Thomas
+  youtube:
+  file:
+
+- slot: day2-closing-ceremony
+  day: 2
+  time: "18:50 - 19:05"
+  title: Closing Ceremony
+  speaker: Zuzanna Kusznir
+  youtube:
+  file:
+
+- slot: day2-jazz-performance
+  day: 2
+  time: "19:10"
+  title: Jazz Performance
+  speaker: Julia Siedl & Chad Fowler
+  youtube:
+  file:

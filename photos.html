@@ -1,0 +1,127 @@
+---
+title: RubyConf Austria 2026 | Photos
+permalink: /photos/
+layout: default
+---
+<main class="content">
+  <header class="header header-speakers">
+    <div class="header__content">
+      <h1 class="header__title">
+        Photos
+      </h1>
+    </div>
+  </header>
+  <section class="section section--basic" id="photos" aria-label="Conference photos">
+    <div class="section__content">
+      {% assign photo_files = site.static_files | where_exp: "f", "f.path contains '/assets/photos/'" | sort: "path" %}
+      {% assign image_exts = ".jpg .jpeg .png .webp .gif .avif" %}
+      {% capture gallery_html %}
+        {% for photo in photo_files %}
+        {% assign ext = photo.extname | downcase %}
+        {% if ext != "" and image_exts contains ext %}
+        <button type="button" class="photo-gallery__item" aria-label="View photo in full size">
+          <img src="{{ photo.path | replace: '/assets/photos/', '/assets/photo_thumbs/' }}" data-full="{{ photo.path }}" alt="RubyConf Austria 2026 — {{ photo.basename }}" loading="lazy" />
+        </button>
+        {% endif %}
+        {% endfor %}
+      {% endcapture %}
+      {% if gallery_html contains "photo-gallery__item" %}
+      <div class="photo-gallery" id="photo-gallery">
+        {{ gallery_html }}
+      </div>
+      {% else %}
+      <article class="section__article mb--8">
+        <div class="col--100">
+          <h3 class="section__article__title">Nothing to see here yet!</h3>
+          <p>Photos from RubyConf Austria 2026 are on their way — check back soon.</p>
+        </div>
+      </article>
+      {% endif %}
+    </div>
+  </section>
+</main>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
+  <button type="button" class="lightbox__close" id="lightbox_close" aria-label="Close photo viewer">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+  </button>
+  <button type="button" class="lightbox__arrow lightbox__arrow--prev" id="lightbox_prev" aria-label="Previous photo">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+  <img class="lightbox__image" id="lightbox_image" src="" alt="" />
+  <button type="button" class="lightbox__arrow lightbox__arrow--next" id="lightbox_next" aria-label="Next photo">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+  <div class="lightbox__counter" id="lightbox_counter" aria-live="polite"></div>
+</div>
+
+<script type="text/javascript">
+  (function () {
+    var items = Array.prototype.slice.call(document.querySelectorAll('.photo-gallery__item'));
+    if (items.length === 0) return;
+
+    var lightbox = document.getElementById('lightbox');
+    var image = document.getElementById('lightbox_image');
+    var counter = document.getElementById('lightbox_counter');
+    var currentIndex = 0;
+    var touchStartX = null;
+
+    function show(index) {
+      currentIndex = (index + items.length) % items.length;
+      var thumb = items[currentIndex].querySelector('img');
+      image.src = thumb.getAttribute('data-full') || thumb.src;
+      image.alt = thumb.alt;
+      counter.textContent = (currentIndex + 1) + ' / ' + items.length;
+    }
+
+    function open(index) {
+      show(index);
+      lightbox.hidden = false;
+      document.body.classList.add('lightbox-open');
+      document.getElementById('lightbox_close').focus();
+    }
+
+    function close() {
+      lightbox.hidden = true;
+      document.body.classList.remove('lightbox-open');
+      items[currentIndex].focus();
+    }
+
+    items.forEach(function (item, index) {
+      item.addEventListener('click', function () { open(index); });
+    });
+
+    document.getElementById('lightbox_close').addEventListener('click', close);
+    document.getElementById('lightbox_prev').addEventListener('click', function () { show(currentIndex - 1); });
+    document.getElementById('lightbox_next').addEventListener('click', function () { show(currentIndex + 1); });
+
+    lightbox.addEventListener('click', function (event) {
+      if (event.target === lightbox) close();
+    });
+
+    document.addEventListener('keydown', function (event) {
+      if (lightbox.hidden) return;
+      if (event.key === 'Escape') close();
+      if (event.key === 'ArrowLeft') show(currentIndex - 1);
+      if (event.key === 'ArrowRight') show(currentIndex + 1);
+    });
+
+    lightbox.addEventListener('touchstart', function (event) {
+      touchStartX = event.changedTouches[0].clientX;
+    }, { passive: true });
+
+    lightbox.addEventListener('touchend', function (event) {
+      if (touchStartX === null) return;
+      var deltaX = event.changedTouches[0].clientX - touchStartX;
+      touchStartX = null;
+      if (Math.abs(deltaX) < 50) return;
+      show(deltaX > 0 ? currentIndex - 1 : currentIndex + 1);
+    }, { passive: true });
+  })();
+</script>

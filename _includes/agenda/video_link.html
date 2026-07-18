@@ -1,0 +1,9 @@
+{% assign slot_video = site.data.videos | where: "slot", include.slot | first %}
+{% if slot_video.youtube or slot_video.file %}
+<a href="/videos/#{{ include.slot }}" class="schedule__item__video">
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M8 5.14V19.14L19 12.14L8 5.14Z"/>
+  </svg>
+  Watch recording
+</a>
+{% endif %}

@@ -1,0 +1,96 @@
+---
+title: RubyConf Austria 2026 | Videos
+permalink: /videos/
+layout: default
+---
+<main class="content">
+  <header class="header header-speakers">
+    <div class="header__content">
+      <h1 class="header__title">
+        Videos
+      </h1>
+    </div>
+  </header>
+  <section class="section section--basic" id="videos" aria-label="Session recordings">
+    <div class="section__content">
+      {% capture published_check %}{% for v in site.data.videos %}{% if v.youtube or v.file %}x{% endif %}{% endfor %}{% endcapture %}
+      {% if published_check == "" %}
+      <article class="section__article mb--8">
+        <div class="col--100">
+          <h3 class="section__article__title">Nothing to see here yet!</h3>
+          <p>Recordings from RubyConf Austria 2026 are being edited — check back soon.</p>
+        </div>
+      </article>
+      {% else %}
+      {% assign day_labels = "Friday, 29th May|Saturday, 30th May|Sunday, 31st May" | split: "|" %}
+      {% for day_label in day_labels %}
+      {% assign day_number = forloop.index %}
+      {% assign day_videos = site.data.videos | where: "day", day_number %}
+      {% capture day_check %}{% for v in day_videos %}{% if v.youtube or v.file %}x{% endif %}{% endfor %}{% endcapture %}
+      {% if day_check != "" %}
+      <div class="video-day">
+        <h2 class="video-day__title">Day {{ day_number }} <span class="video-day__date">{{ day_label }}</span></h2>
+        <div class="video-grid">
+          {% for video in day_videos %}
+          {% if video.youtube or video.file %}
+          <article class="video-card" id="{{ video.slot }}">
+            <div class="video-card__media">
+              {% if video.youtube %}
+              <button type="button" class="video-card__poster" data-youtube="{{ video.youtube }}" aria-label="Play {{ video.title }}">
+                <img src="https://i.ytimg.com/vi/{{ video.youtube }}/hqdefault.jpg" alt="" loading="lazy" />
+                <span class="video-card__play" aria-hidden="true">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 5.14V19.14L19 12.14L8 5.14Z"/>
+                  </svg>
+                </span>
+              </button>
+              {% elsif video.file %}
+              <video controls preload="metadata" playsinline>
+                <source src="{{ video.file }}" />
+                Your browser does not support embedded videos.
+              </video>
+              {% endif %}
+            </div>
+            <div class="video-card__body">
+              <h3 class="video-card__title">{{ video.title }}</h3>
+              <p class="video-card__speaker">{{ video.speaker }}</p>
+              <p class="video-card__meta">
+                <span>{{ video.time }}</span>
+                <a href="/#agenda" class="video-card__agenda-link">View in agenda</a>
+              </p>
+            </div>
+          </article>
+          {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+      {% endfor %}
+      {% endif %}
+    </div>
+  </section>
+</main>
+
+<script type="text/javascript">
+  (function () {
+    var posters = Array.prototype.slice.call(document.querySelectorAll('.video-card__poster'));
+    posters.forEach(function (poster) {
+      poster.addEventListener('click', function () {
+        var iframe = document.createElement('iframe');
+        iframe.src = 'https://www.youtube-nocookie.com/embed/' + poster.getAttribute('data-youtube') + '?autoplay=1';
+        iframe.title = poster.getAttribute('aria-label');
+        iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+        iframe.setAttribute('allowfullscreen', '');
+        poster.parentNode.replaceChild(iframe, poster);
+      });
+    });
+
+    // Highlight the card a deep link (/videos/#slot) points at.
+    if (window.location.hash) {
+      var target = document.getElementById(window.location.hash.substring(1));
+      if (target && target.classList.contains('video-card')) {
+        target.classList.add('is-highlighted');
+      }
+    }
+  })();
+</script>
