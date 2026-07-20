@@ -138,7 +138,7 @@
   time: "15:50 - 16:20"
   title: 15 years of Rails with Domain Driven Design - lessons learnt
   speaker: Andrzej Krzywda
-  youtube:
+  youtube: https://youtu.be/zewTY3J42DU
   file:
 
 - slot: day2-workshop-jruby
