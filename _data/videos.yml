@@ -130,7 +130,7 @@
   time: "15:20 - 15:40"
   title: Lightning Talks
   speaker: Community speakers
-  youtube:
+  youtube: https://youtu.be/tii5S9vq1eU
   file:
 
 - slot: day2-rails-ddd
