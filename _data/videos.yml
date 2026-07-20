@@ -120,9 +120,9 @@
 - slot: day2-piano-iman
   day: 2
   time: "15:00 - 15:20"
-  title: Piano
+  title: "Piano: Live at Das MuTh"
   speaker: Iman Jahić Hošić
-  youtube:
+  youtube: https://youtu.be/0KaWnFykEv4
   file:
 
 - slot: day2-lightning-talks
